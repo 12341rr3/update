@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- AOS CSS (in <head>) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navisthaa - Premium Vehicle Accessories</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    body {
+      background-color: #0e0101;
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1, h2, h5 {
+      color: #212529;
+    }
+
+    .hero {
+      background: url('https://via.placeholder.com/1600x600') no-repeat center center;
+      background-size: cover;
+      color: rgb(5, 0, 0);
+      padding: 150px 0;
+      text-align: center;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+      animation: fadeInLeft 1.5s;
+    }
+
+    .navbar-nav .nav-link {
+      animation: fadeInRight 1s;
+    }
+
+    section {
+      background-color: white;
+      padding: 60px 0;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background-color: #212529;
+      color: white;
+    }
+
+    .form-control, .btn {
+      border-radius: 0.5rem;
+    }
+
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .offer-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.5s ease;
+  cursor: pointer;
+  background: linear-gradient(135deg, white);
+  font: normal;
+  line-height: normal;
+  font-size: 14px;
+  
+
+}
+
+.offer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #5a5a5a,white);
+}
+
+.offer-card i {
+  transition: transform 0.4s ease;
+}
+.offer-card:hover i {
+  transform: scale(1.2);
+}
+.offer-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+  .offer-card p {
+  font-size: 14px;
+  line-height: normal;
+  color: #111;
+    font-family: 'Poppins', sans-serif;
+}
+/* General Styling */
+#offerings-section h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+#offerings-section ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+#offerings-section hr {
+  border: none;
+  height: 2px;
+  background: white;
+  width: 60px;
+  margin-top: -10px;
+  margin-bottom: 1rem;
+}
+
+/* Link Styling */
+#offerings-section a {
+  color: #d1d1d1;
+  font-size: 0.95rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: block;
+}
+
+#offerings-section a:hover {
+  color: #007bff;
+  transform: translateX(5px);
+  text-decoration: none;
+}
+
+
+/* Responsive Spacing */
+@media (max-width: 768px) {
+  #offerings-section .col-md-3 {
+    margin-bottom: 2rem;
+  }
+}
+ 
+  .who-we-are-section {
+    background: url('https://static.wixstatic.com/media/7e294e_2527cba69e864a16bc390733546ebb45~mv2.jpg/v1/fill/w_1200,h_786,al_c,q_85,enc_avif,quality_auto/7e294e_2527cba69e864a16bc390733546ebb45~mv2.jpg') center center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 245, 245, 0.7); /* light gray overlay */
+    z-index: 1;
+  }
+
+  .who-we-are-section .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .yellow-line {
+    width: 40px;
+    height: 6px;
+    background-color: #e5a900;
+  }
+
+  .who-we-are-section h2 {
+    font-size: 48px;
+    color: #111111;
+    line-height: 1.2;
+  }
+  .who-we-are-section .bg-white {
+    padding: 2.5rem; /* Increased padding for content box */
+  }
+
+  .who-we-are-section p {
+    font-size: 14px;
+    line-height: normal;
+    color: #111;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  @media (max-width: 768px) {
+    .who-we-are-section h2 {
+      font-size: 32px;
+    }
+  }
+
+   .who-we-are-section p {
+      font-size: 18px;
+    }
+
+ .carousel-container {
+    padding-top: 56px; /* Common height for Bootstrap navbar */
+  }
+
+  @media (min-width: 768px) {
+    .carousel-container {
+      padding-top: 100px; /* Larger screens often have taller navbars */
+    }
+  }
+
+ #clientCarousel img {
+  max-height: 100px;
+  object-fit: contain;
+  width: auto;
+  
+}
+#clientCarousel .card-body {
+ height: auto;
+ width: auto;
+  
+}
+#clientCarousel {
+
+background-color: #f1c40f;
+}
+#clientCarousel{
+  
+  border-radius: 10px;
+  padding-top: 1%;
+  padding-bottom: .3%;
+  
+
+}
+.styling-image {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+    
+    .section-heading {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    .category-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem 1rem 4rem;
+    }
+
+    
+
+   
+
+    .category-card h5 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0;
+      transition: color 0.3s;
+    }
+
+    @media (max-width: 576px) {
+      .category-card {
+        width: 100%;
+      }
+    }
+    .feature-card {
+      border: 1px solid #f5f5f5;
+      padding: 30px 20px;
+      text-align: left;
+      height: 100%;
+      opacity: 0;
+      transform: scale(0.95);
+      animation: popIn 0.6s ease forwards;
+
+    }
+    .feature-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.949);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+.feature-card{
+  transition: all 0.35s ease;
+  border-radius:18px;
+}
+.feature-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 12px 35px rgba(0,0,0,0.35) !important;
+}
+.feature-card{
+  padding:32px;
+  
+}
+.feature-card i{
+  transition:all .35s;
+}
+.feature-card:hover i{
+  transform:scale(1.15);
+   opacity: 0;
+      transform: scale(0.95);
+      animation: popIn 0.6s ease forwards;
+
+}
+
+#offerings{
+  padding-bottom:60px !important;
+}
+.section-title{
+  font-size:48px;
+  line-height:1.1;
+  font-weight:700;
+}
+.offer-card{
+  height:100%;
+}
+.offer-card .card-body{
+  padding:30px;
+}
+    
+    /* Delay animations for each column */
+    .col-lg-3:nth-child(1) .feature-card { animation-delay: 0.8s; }
+    .col-lg-3:nth-child(2) .feature-card { animation-delay: 1.3s; }
+    .col-lg-3:nth-child(3) .feature-card { animation-delay: 1.8s; }
+    .col-lg-3:nth-child(4) .feature-card { animation-delay: 2.1s; }
+
+    @keyframes popIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .feature-number {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #000;
+    }
+
+    .feature-title {
+      color: #e5a900 ;
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin: 10px 0;
+    }
+
+    .feature-text {
+      color: #555;
+      font-size: 0.95rem;
+    }
+  
+
+.carousel-item img{
+  height: 320px;
+  width: 320px;
+  object-fit:contain;
+  background: white; 
+}
+
+.global-presence-section {
+  background: solid(to bottom right, #fff, #fff);
+  background-image: url('https://static.wixstatic.com/media/7e294e_ec014bec3bd64a5984d94da3cf3be4b4~mv2.jpg/v1/crop/x_0,y_0,w_3000,h_1267/fill/w_1794,h_757,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/navisthaa%20website2.jpg 1x, https://static.wixstatic.com/media/7e294e_ec014bec3bd64a5984d94da3cf3be4b4~mv2.jpg/v1/crop/x_0,y_0,w_3000,h_1267/fill/w_3000,h_1266,al_c,q_90,enc_avif,quality_auto/navisthaa%20website2.jpg 2x'); /* You can replace with your own map image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  image-rendering: auto;
+}
+
+.certifications-section {
+  background-color: #eab808; /* Yellow background */
+}
+
+.section-line {
+  width: 100px;
+  height: 20px;
+  background-color: #ffffff;
+  border: none;
+  margin-bottom: 15px;
+}
+
+
+
+
+    
+    
+  </style>
+</head>
+
+<body>
+  
+  <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <img src="https://static.wixstatic.com/media/7e294e_b5d8cb11b22c41fea46f90d1d9b2ae26~mv2.png/v1/fill/w_388,h_79,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20FORM2.png" class="img-fluid" style="max-height: 40px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#heroCarousel">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offerings">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Clients">Clients</a></li>
+          <li class="nav-item"><a class="nav-link" href="#product">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact-address">Contact</a></li>
+          
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Hero Carousel Section -->
+<section class="hero-carousel py-5 " style="background-color:white ;position: relative;">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <!-- Left Text -->
+            <div class="col-sm-4 text-section ps-md-5">
+              <h1 class="animate__animated animate__fadeInDown mb-3 text-dark">Innovating for Tomorrow</h1>
+              <p class="animate__animated animate__fadeInUp mb-4 text-dark">
+                Engineering excellence, precision, and performance across industries.
+              </p>
+              
+            </div>
+
+            <!-- Right Image -->
+            <div class="col-sm-6" >
+              <img src="C:\Users\SHREYASH\OneDrive\Desktop\updateNavista\img\new banner.jpg" class="img-fluid  w-100" style="height: 100%;" alt="Banner 1">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-section ps-md-5">
+              <h1 class="animate__animated animate__fadeInDown mb-3 text-dark">Global Presence, Local Expertise</h1>
+              <p class="animate__animated animate__fadeInUp mb-4 text-dark">
+                Serving industries worldwide with trust and technology.
+              </p>
+              
+            </div>
+            <div class="col-sm-6">
+              <img src="C:\Users\SHREYASH\OneDrive\Desktop\updateNavista\img\new banner.jpg" class="img-fluid  w-100" style="height: 100%;" alt="Banner 2">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item ">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-section ps-md-5">
+              <h1 class="animate__animated animate__fadeInDown mb-3 text-dark">Driving Make-In-India Forward</h1>
+              <p class="animate__animated animate__fadeInUp mb-4 text-dark">
+                Empowering growth through innovation and collaboration.
+              </p>
+              
+            </div>
+            <div class="col-sm-6 ">
+              <img src="C:\Users\SHREYASH\OneDrive\Desktop\updateNavista\img\new banner.jpg" class="img-fluid w-100" style="height: 100%;" alt="Banner 3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- Animate.css CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+.hero-carousel {
+  background-color: #000; /* optional dark backdrop */
+  color: #fff;
+}
+
+.text-section {
+  padding: 50px 30px;
+}
+
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.btn-warning {
+  background-color: #f2c40f;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #d6ab0d;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .hero-img {
+    height: 50vh;
+  }
+  .text-section {
+    text-align: center;
+    padding: 20px;
+  }
+}
+</style>
+
+<!-- Who We Are Section -->
+<section class="who-we-are-section position-relative text-dark py-5">
+  <div class="bg-overlay"></div>
+  <div class="container position-relative">
+    <div class="row justify-content-between">
+  <!-- WHO WE ARE -->
+  <div class="col-md-12 mb-5">
+    <div class="mb-3">
+      <div class="yellow-line mb-2"></div>
+      <h2 class="fw-bold text-uppercase m-0" style="font-size: 32px;">Who We Are</h2>
+    </div>
+    <div class="p-4 bg-white bg-opacity-75 rounded shadow">
+      <p>We are a ISO 9001 : 2015 certified company with team of experts in Surface Augmentation technology with attention to details.</p>
+      <p>Team of Navisthaa is adept with requisite business resources thereby helping our client meet their requirement with optimal efficiency.</p>
+      <p>Having strong background of design & print industry, we help by enhancing the current offerings to next level.</p>
+    </div>
+  </div>
+
+  <!-- OUR VISION -->
+  <div class="col-md-5 mb-6">
+    <div class="mb-3">
+      <div class="yellow-line mb-2"></div>
+      <h2 class="fw-bold text-uppercase  " style="font-size: 32px;">Our Vision</h2>
+    </div>
+    <div class="p-4 bg-white bg-opacity-75 rounded shadow">
+      <p>Navisthaa is a world-class company that provides surface augmentation technology
+for visual management and design communication.</p>
+      <p>To spearhead the consortium of companies and provide profitable business solutions.</p>
+            <p>To spearhead the consortium of companies and provide profitable business solutions.</p>
+    </div>
+  </div>
+
+  <!-- OUR MISSION -->
+  <div class="col-md-5 mb-6 ">
+    <div class="mb-3">
+      <div class="yellow-line mb-2"></div>
+      <h2 class="fw-bold text-uppercase"style="font-size: 32px;">Our Mission</h2>
+    </div>
+    <div class="p-4 bg-white bg-opacity-75 rounded shadow">
+      <p>To spearhead the consortium of companies and provide profitable business solutions.</p>
+            <p>To spearhead the consortium of companies and provide profitable business solutions.</p>
+                  <p>To spearhead the consortium of companies and provide profitable business solutions.</p>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+  
+
+<!-- Our Services Section -->
+
+<section id="offerings" class="py-5 text-danger" style="background-color: rgb(231,173,5)">
+  <div class="container text-center">
+
+    <h2 class="section-title text-uppercase m-0" style="font-size: 32px;">Our Services</h2>
+    <p class="mb-5 text-muted">Explore our premium range of vehicle accessories designed for performance, style, and innovation.</p>
+
+    <!-- row 1 -->
+    <div class="row g-4 justify-content-center mb-4">
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card offer-card border-0 shadow bg-secondary text-black">
+          <div class="card-body text-center">
+            <i class="fa-solid fa-screwdriver-wrench fa-2x mb-3 text-dark"></i>
+            <h5 class="card-title ">Design</h5>
+            <p class="card-text">At Navisthaa Solutions, design is at the core of innovation. Our team blends aesthetics with functionality to craft OEM-grade visual and structural components, ensuring every concept aligns with global automotive standards and brand identities.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card offer-card border-0 shadow bg-secondary text-black">
+          <div class="card-body text-center">
+            <i class="fa-solid fa-car-side fa-2x mb-3 text-dark"></i>
+            <h5 class="card-title">Manufacturing</h5>
+            <p class="card-text">We offer integrated and scalable manufacturing capabilities, delivering high-precision components through advanced technologies.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card offer-card border-0 shadow bg-secondary text-black">
+          <div class="card-body text-center">
+            <i class="fa-solid fa-gears fa-2x mb-3 text-dark"></i>
+            <h5 class="card-title">Processes</h5>
+            <p class="card-text">Smart gadgets like GPS trackers, dash cams, and wireless chargers.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- row 1 end -->
+
+
+    <!-- row 2 -->
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card offer-card border-0 shadow bg-secondary text-black">
+          <div class="card-body text-center">
+            <i class="fa-solid fa-briefcase fa-2x mb-3 text-dark"></i>
+            <h5 class="card-title">Sourcing</h5>
+            <p class="card-text">We operate an agile sourcing network across Asia and beyond, ensuring reliable access to high-grade raw materials, specialized components, and cost-efficient supply chains.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card offer-card border-0 shadow bg-secondary text-black">
+          <div class="card-body text-center">
+            <i class="fa-solid fa-sack-dollar fa-2x mb-3 text-dark"></i>
+            <h5 class="card-title">Sales</h5>
+            <p class="card-text">Navisthaa’s dedicated sales team partners with global OEMs and Tier-1 suppliers, offering tailored accessory and component solutions that align with regional market trends and consumer preferences.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- row 2 end -->
+
+  </div>
+</section>
+
+<!-- OUR OFFERING-->
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-12">
+        <h2 class="fw-bold text-dark">
+          <span style="border-left: 10px solid #f1c40f; padding-left: 10px; font-size: 32px;" >OUR OFFERINGS</span>
+        </h2>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-md-6 mb-4">
+        <h5 class="fw-bold text-dark"><a href="images.html" class="text-dark text-decoration-none d-block"> PRODUCT</a></h5>
+        <ul class="list-unstyled text-secondary">
+          <li>Screen Printed Decals</a></li>
+          <li>Soft Emblems</li>
+          <li>Dome Logos</li>
+          <li>Automotive Dials</li>
+          <li>Exterior & Interior Styling Kit</li>
+          <li>Caution, Security & Warning Labels (Tamper Proof or void)</li>
+          <li>Gaskets, Foam Die Cuts Labels</li>
+          <li>Insulators (High Temp Thermal Insulation)</li>
+          <li>FSR & Illuminated Panels</li>
+          <li>Climate Controller Labels</li>
+        </ul>
+
+        <h5 class="fw-bold text-dark mt-4"> <a class="text-dark text-decoration-none d-block">WHITE GOODS PRODUCTS :</a></h5>
+        <ul class="list-unstyled text-secondary">
+          <li>Fascias / Overlays</li>
+          <li>Membrane Switches</li>
+        </ul>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-6 mb-4">
+        <h5 class="fw-bold text-dark"><a class="text-dark text-decoration-none d-block">PROCESSES :</a></h5>
+        <ul class="list-unstyled text-secondary">
+          <li>Screen Printing</li>
+          <li>Hydro-graphics</li>
+          <li>TOM Technology</li>
+          <li>3D Forming</li>
+          <li>Thermoforming</li>
+          <li>Injection Molding</li>
+          <li>IMD</li>
+        </ul>
+
+        <h5 class="fw-bold text-dark mt-4"><a class="text-dark text-decoration-none d-block">SOURCING :</a></h5>
+        <ul class="list-unstyled text-secondary">
+          <li>Protection Films</li>
+          <li>Overcoats</li>
+          <li>PU Resins</li>
+          <li>Poly-Carbonate Films</li>
+          <li>Fasteners</li>
+          <li>DS Foam Tapes</li>
+          <li>Solvent & Water based Adhesives</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product Categories-->
+<section id="product" class="py-5" >
+  <div class="container" >
+     <div class="row mb-4">
+      <div class="col-12">
+        <h2 class="fw-bold text-dark">
+          <span style="border-left: 10px solid #f1c40f; padding-left: 10px;" style="font-size: 32px;">OUR KEYPRODUCTS</span>
+        </h2>
+      </div>
+    </div>
+    <div class="row g-4">
+      <!-- Feature 1 -->
+      <div class="col-md-6 col-lg-3">
+        <a href="surface-argumentation.html" class="text-decoration-none">
+        <div class="feature-card">
+         
+          <div class="feature-title"> SURFACE AUGMENTATION</div></a>
+          <div class="feature-text">
+            Elaborate on the factor or feature you mentioned above. Use this as an opportunity to attract your users to opt for your offer.
+          </div>
+        </div>
+        
+      </div>
+      <!-- Feature 2 -->
+      <div class="col-md-6 col-lg-3" >
+        <a href="illuminated-products.html" class="text-decoration-none">
+        <div class="feature-card">
+          
+          <div class="feature-title ">SURFACE ILLUMINATION
+
+          </div></a>
+          <div class="feature-text">
+            Elaborate on the factor or feature you mentioned above. Use this as an opportunity to attract your users to opt for your offer.
+          </div>
+        </div>
+      </div>
+      <!-- Feature 3 -->
+      <div class="col-md-6 col-lg-3">
+        <a href="sustainable-product.html" class="text-decoration-none" >
+        <div class="feature-card">
+          
+          <div class="feature-title">SUSTAINABLITY</div></a>
+          <div class="feature-text">
+            Elaborate on the factor or feature you mentioned above. Use this as an opportunity to attract your users to opt for your offer.
+          </div>
+        </div>
+      </div>
+      <!-- Feature 4 -->
+      <div class="col-md-6 col-lg-3">
+        <a href="merchandising.html" class="text-decoration-none">
+        <div class="feature-card">
+          
+          <div class="feature-title">TRACKED PRODUCTS</div></a>
+          <div class="feature-text">
+            Elaborate on the factor or feature you mentioned above. Use this as an opportunity to attract your users to opt for your offer.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Clients Section -->
+<section id="Clients" class="bg-white py-5">
+  <div class="container">
+    <!-- Title -->
+    <div class="row align-items-start mb-4">
+      <div class="col-md-12 d-flex align-items-center">
+        <div class="me-3" style="width: 120px; height: 8px; background-color: #f1b400;"></div>
+        <h2 class="fw-bold text-black mb-0" style="font-size: 32px; line-height: 1.1;">
+          OUR<br>CLIENTS
+        </h2>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner text-center">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-6 col-sm-4 col-md-2 mb-3">
+              <div class="card p-3 shadow-sm border-0">
+                <img src="https://i.ibb.co/QjY9GbXX/image.png" class="img-fluid" alt="VW">
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 mb-3">
+              <div class="card p-3 shadow-sm border-0">
+                <img src="https://i.ibb.co/LX2hmS42/image.png" class="img-fluid" alt="Skoda">
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 mb-3">
+              <div class="card p-3 shadow-sm border-0">
+                <img src="https://i.ibb.co/SwGQ0jYS/image.png" class="img-fluid" alt="Stellantis">
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 mb-3">
+              <div class="card p-3 shadow-sm border-0">
+                <img src="https://i.ibb.co/xtR0XX6c/image.png" class="img-fluid" alt="NTF">
+              </div>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 (add more logos here) -->
+        <div class="carousel-item active">
+          <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-6 col-sm-4 col-md-2 mb-3">
+              <div class="card p-3 shadow-sm border-0">
+                <img src="https://i.ibb.co/2YfXJ7Wg/image.png" class="img-fluid" alt="Reliance">
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 mb-3">
+              <div class="card p-3 shadow-sm border-0">
+                <img src="https://i.ibb.co/Qw8mZWz/image.png" class="img-fluid" alt="Kessebohmer">
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 mb-3">
+              <div class="card p-3 shadow-sm border-0">
+                <img src="https://i.ibb.co/JRKHb64T/image.png" class="img-fluid" alt="CNH">
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 mb-3">
+              <div class="card p-3 shadow-sm border-0">
+                <img src="https://i.ibb.co/rGBFMVVM/image.png"  class="img-fluid" alt="mutual automotive">
+              </div>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#clientCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- IMG -->
+<section class="py-5 bg-dark">
+  <div class="container text-center">
+    <h2 class="text-white mb-4">EXTERIOR & INTERIOR STYLING KIT</h2>
+    <img src="https://static.wixstatic.com/media/7e294e_6d8698e67692442c97f12c1e35a8ac24~mv2.jpg/v1/fill/w_1901,h_781,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7e294e_6d8698e67692442c97f12c1e35a8ac24~mv2.jpg" alt="Car Styling Kit" class="d-block w-100">
+  </div>
+</section>
+
+
+<!-- Owner Section -->
+<section id="owner" class="py-5   text-white img-fluid" style="background-color: #d1d1d1;">
+  <div class="container text-center">
+    <h2 class="fw-bold text-black mb-0" style="font-size: 32px; line-height: 1.1;">OUR TEAM</h2>
+    <div id="ownerCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-3 mb-4">
+              <img src="https://static.wixstatic.com/media/7e294e_15f833b7ac444e1c834f57db91f63a5a~mv2.jpg/v1/fill/w_366,h_403,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/RAHUL.jpg"
+                   class="rounded-circle mb-3 border border-3 border-black shadow img-fluid"  style="width:250px; height:250px; object-fit:cover;"
+                   
+                   alt="Owner Photo">
+              <h5 class="fw-bold text-black">Mr. Rahul Mehta</h5>
+              <p class="text-warning fw-bold mb-1">Business Development</p>
+              <p class="text-muted mx-auto" style="max-width: 300px;">
+                Passionate about automotive innovation and excellence.
+              </p>
+            </div>
+            <div class="col-md-3 mb-4">
+              <img src="https://static.wixstatic.com/media/7e294e_c029bef102334560a61a1d690ff03627~mv2.jpg/v1/fill/w_366,h_403,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/nehal.jpg"
+                   class="rounded-circle mb-3 border border-3 border-black  shadow img-fluid"  style="width:250px; height:250px; object-fit:cover;"
+                   alt="Owner Photo">
+              <h5 class="fw-bold text-black">Ms.Nehal Parikh</h5>
+              <p class="text-warning fw-bold mb-1">Head Design</p>
+              <p class="text-muted mx-auto" style="max-width: 300px;">
+                Bringing creative vision to every product design.
+              </p>
+            </div>
+
+             <div class="col-md-3 mb-4">
+              <img src=" https://static.wixstatic.com/media/7e294e_eea65ccd098a491e9c1f2810366fcfff~mv2.jpg/v1/crop/x_8,y_0,w_580,h_623/fill/w_366,h_403,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/sravan.jpg"
+                   class="rounded-circle mb-3 border border-3 border-black  shadow img-fluid"  style="width:250px; height:250px; object-fit:cover;"
+                   alt="Owner Photo">
+              <h5 class="fw-bold text-black">Mr.Sravan Kumar</h5>
+              <p class="text-warning fw-bold mb-1">Head Opertions</p>
+              <p class="text-muted mx-auto" style="max-width: 300px;">
+                Driving brand awareness across all platforms.
+              </p>
+            </div>
+            <div class="col-md-3 mb-4">
+              <img src=" https://static.wixstatic.com/media/7e294e_4bc8edb362d54c738ac016daed14e44c~mv2.jpg/v1/fill/w_366,h_403,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ram.jpg"
+                   class="rounded-circle mb-3 border border-3 border-black  shadow img-fluid"  style="width:250px; height:250px; object-fit:cover;"
+                   alt="Owner Photo">
+              <h5 class="fw-bold text-black">Mr.Ramanand Borse</h5>
+              <p class="text-warning fw-bold mb-1">Global Sales</p>
+              <p class="text-muted mx-auto" style="max-width: 300px;">
+                Expert in smart tech & product integration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+
+      
+    </div>
+  </div>
+</section>
+
+<!-- Certificate-->
+
+<section class="certifications-section text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <hr class="section-line">
+        <h2 class="fw-bold display-6 text-white">CERTIFICATIONS</h2>
+        <p class="mt-3 fs-5">Our consortium companies are certified with following:</p>
+        <ul class="list-unstyled mt-4 fs-2">
+          <li class="mb-2"><strong>• ISO / IATF</strong></li>
+          <li class="mb-2"><strong>• ISO 9001-2008</strong></li>
+          <li class="mb-2"><strong>• ISO 14001-2004</strong></li>
+          <li class="mb-2"><strong>• OHSAS 18001-2007</strong></li>
+          <li class="mb-2"><strong>• ISO/TS 16949-2009</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<section class="global-presence-section text-white py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Text Content -->
+      <div class="col-md-6">
+        
+        <h2 class="fw-bold display-6 text-white">GLOBAL<br>PRESENCE</h2>
+        <b class="mt-4 text-white ">
+          Extending our services to UAE, Australia & ASEAN regions. Having global experience in catering to region-specific requirements gives Navisthaa a unique edge in International Market. 
+          Spearheading Brand India and promoting Make-In-India is what we take pride in.
+        </b><br>
+        <b>
+          Our global footprints have begun with Australia, Indonesia & Middle East Asia. 
+          Regional connectivity and end-to-end solutions are helping us keep our customers happy.
+        </b>
+      </div>
+
+      <!-- Right Map Image -->
+      <div class="col-md-6 position-relative mt-4 mt-md-0">
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+    
+<!-- Our offering SECTION -->
+ 
+<section id="offerings-section" class="py-4" style="background-color: #1b1a1a;">
+  <div class="container text-center">
+    <h2 class="mb-4 text-white" style="font-size: 32px;">Quick Links</h2>
+  </div>
+  <div class="container">
+    <div class="row">
+     <div class="col-md-4">
+  <h5 class="text-light mb-3">Follow Us</h5>
+  <hr class="text-secondary" style="margin-top: -10px; width: 100px;">
+
+  <ul class="list-unstyled">
+    <li>
+      <a href="https://www.instagram.com/navisthaa_solutions/?hl=en" target="_blank" class="text-decoration-none text-light d-block py-1">
+        <i class="fab fa-instagram me-2"></i> Instagram
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/navisthaa-solutions-68162a21b" target="_blank" class="text-decoration-none text-light d-block py-1">
+        <i class="fab fa-linkedin me-2"></i> LinkedIn
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      
+
+      <div class="col-md-4">
+        <h5 class="text-light mb-3">Certifications</h5>
+        <hr class="text-secondary" style="margin-top: -10px; width: 100px;">
+
+        <ul class="list-unstyled">
+          <li><a class="text-decoration-none text-light d-block py-1"> ISO9001</a></li>
+        </ul>
+      </div>
+
+       <div class="col-md-4">
+        <h5 class="text-light mb-3">Global Presence</h5>
+        <hr class="text-secondary" style="margin-top: -10px; width: 100px;">
+
+        <ul class="list-unstyled">
+          <li><a class="text-decoration-none text-light d-block py-1"> Indonesia</a></li>
+          <li><a class="text-decoration-none text-light d-block py-1"> UAE</a></li>
+          <li><a class="text-decoration-none text-light d-block py-1"> Latam</a></li>
+          <li><a class="text-decoration-none text-light d-block py-1"> Europe</a></li>
+          <li><a class="text-decoration-none text-light d-block py-1"> Australia</a></li>
+          <li><a class="text-decoration-none text-light d-block py-1"> USA</a></li>
+        </ul>
+      </div>
+  
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+  
+  <!-- Style -->
+  <style>
+    .grayscale-img {
+      filter: grayscale(0%);
+      transition: filter 0.4s ease-in-out, transform 0.4s ease;
+    }
+  
+    .grayscale-img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+  </style>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2025 Navisthaa. All rights reserved.</p>
+     
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+</body>
+
+</html>
