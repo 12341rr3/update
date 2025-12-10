@@ -373,14 +373,17 @@ background-color: #f1c40f;
 }
 
 .global-presence-section {
-  background: solid(to bottom right, #fff, #fff);
-  background-image: url('https://static.wixstatic.com/media/7e294e_ec014bec3bd64a5984d94da3cf3be4b4~mv2.jpg/v1/crop/x_0,y_0,w_3000,h_1267/fill/w_1794,h_757,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/navisthaa%20website2.jpg 1x, https://static.wixstatic.com/media/7e294e_ec014bec3bd64a5984d94da3cf3be4b4~mv2.jpg/v1/crop/x_0,y_0,w_3000,h_1267/fill/w_3000,h_1266,al_c,q_90,enc_avif,quality_auto/navisthaa%20website2.jpg 2x'); /* You can replace with your own map image */
-  background-size: contain;
-  background-position: center;
+  background-image: url("C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/globe.png");
+     /* full image visible */
+  background-repeat: no-repeat; /* prevent tiling */
+  background-position: center;  /* center properly */
+  object-fit: fill;
+  width: 100%;
+  min-height: 600px;            /* adjust height */
   position: relative;
-  image-rendering: auto;
   
 }
+
 
 .certifications-section {
   background-color: #f1c40f; /* Yellow background */
@@ -394,7 +397,17 @@ background-color: #f1c40f;
   margin-bottom: 15px;
 }
 
-
+ /* Style for fixed header */
+    .fixed-top-heading {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px 0;
+      z-index: 1050;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      text-align: center;
+    }
 
 
     
@@ -413,11 +426,12 @@ background-color: #f1c40f;
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#heroCarousel">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#offerings">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Clients">Clients</a></li>
-          <li class="nav-item"><a class="nav-link" href="#product">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact-address">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#who-we-are-section">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offerings">Offering</a></li>
+          <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Clients">Client</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
           
 
         </ul>
@@ -425,168 +439,244 @@ background-color: #f1c40f;
     </div>
   </nav>
 
-<!-- Hero Carousel Section -->
-<section class="hero-carousel py-4 " style="background-color:white ;position: relative;">
-  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-    <div class="carousel-inner">
+ <section id="Home" class="hero-split">
+  <div class="container-fluid">
+    <div class="row align-items-center">
 
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <!-- Left Text -->
-            <div class="col-sm-5 text-section ps-md-5">
-              <h1 class="animate__animated animate__fadeInDown mb-3" style="color:#f1c40f ; padding-top: 12%;">Innovating for Tomorrow</h1>
-              <p class="animate__animated animate__fadeInUp mb-4 text-dark">
-                Engineering excellence, precision, and performance across industries.
-              </p>
-              
-            </div>
-
-            <!-- Right Image -->
-            <div class="col-sm-7" >
-              <img src="C:\Users\SHREYASH\OneDrive\Desktop\updateNavista\img\new banner.jpg" class="img-fluid  w-100" style="height: 100%;" alt="Banner 1">
-            </div>
-          </div>
-        </div>
+      <!-- LEFT SIDE - 40% -->
+      <div class="col-md-4 col-lg-4 text-dark left-fixed " style="font-size: 15px;">
+        <h3 class="mb-2" style="padding-left: 80px;">AUGMENTING SURFACES ENHANCING LIVES</h3>
+        <p class="mb-4"style="padding-left: 80px;">
+          CREATING UNIQUE EXPRESSIONS
+         </p>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-sm-5 text-section ps-md-5">
-              <h1 class="animate__animated animate__fadeInDown mb-3" style="color: #f1c40f;padding-top: 12%;">Global Presence, Local Expertise</h1>
-              <p class="animate__animated animate__fadeInUp mb-4 text-dark">
-                Serving industries worldwide with trust and technology.
-              </p>
-              
-            </div>
-            <div class="col-sm-7">
-              <img src="C:\Users\SHREYASH\OneDrive\Desktop\updateNavista\img\new banner.jpg" class="img-fluid  w-100" style="height: 100%;" alt="Banner 2">
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- RIGHT SIDE - 60% -->
+      <div class="col-md-12 col-lg-8 p-0 right-panel">
 
-      <!-- Slide 3 -->
-      <div class="carousel-item ">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-sm-5 text-section ps-md-5">
-              <h1 class="animate__animated animate__fadeInDown mb-2" style="color: #f1c40f;padding-top: 12%;">Driving Make-In-India Forward</h1>
-              <p class="animate__animated animate__fadeInUp mb-4 text-dark">
-                Empowering growth through innovation and collaboration.
-              </p>
-              
+        <div id="rightCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/new banner.jpg"
+                   class="w-100  img-fluid carousel-img" alt="Slide 1">
             </div>
-            <div class="col-sm-7 ">
-              <img src="C:\Users\SHREYASH\OneDrive\Desktop\updateNavista\img\new banner.jpg" class="img-fluid w-100" style="height: 100%;" alt="Banner 3">
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/new banner.jpg"
+                   class="w-100 img-fluid carousel-img" alt="Slide 2">
             </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/new banner.jpg"
+                   class="w-100 img-fluid carousel-img" alt="Slide 3">
+            </div>
+
           </div>
+
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button"
+                  data-bs-target="#rightCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button"
+                  data-bs-target="#rightCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
         </div>
+
       </div>
     </div>
-
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
   </div>
 </section>
 
-<!-- Animate.css CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 <style>
-.hero-carousel {
-  background-color: #000; /* optional dark backdrop */
-  color: #fff;
+.hero-split {
+  background: #fff;
+  padding: 60px 20px;
 }
 
-.text-section {
-  padding: 50px 30px;
+.left-fixed {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
 }
 
+/* FIXED HEIGHT FOR RIGHT SIDE */
+.hero-split .col-md-12 {
+       /* FULL SCREEN HEIGHT */
+  padding: 0;
+  overflow: hidden;
+}
 
-.hero-img {
+.carousel-img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  overflow: hidden;
+  object-fit: contain;
+  object-position: center;
+  transform: scale(1.5);   /* ZOOM IN */
 }
 
-.btn-warning {
-  background-color: #f2c40f;
-  border: none;
-  transition: 0.3s ease;
-}
-
-.btn-warning:hover {
-  background-color: #d6ab0d;
-}
-
-/* Mobile Adjustments */
+/* ----------- MOBILE VIEW ----------- */
 @media (max-width: 768px) {
-  .hero-img {
-    height: 50vh;
-  }
-  .text-section {
+
+  .left-fixed {
+    position: static;
     text-align: center;
-    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .right-panel {
+    height: auto;      /* reset */
+  }
+
+  .carousel-img {
+    height: auto;      /* normal responsive height */
+    transform: scale(1);   /* remove zoom */
+    object-fit: contain;   /* show full vehicle */
   }
 }
 </style>
 
 <!-- Who We Are Section -->
-<section class="who-we-are-section position-relative text-dark py-5">
+<section id="who-we-are-section" class="who-we-are-section position-relative text-dark py-5">
   <div class="bg-overlay"></div>
   <div class="container position-relative">
+
     <div class="row justify-content-between">
-  <!-- WHO WE ARE -->
-  <div class="col-md-12 mb-5">
-    <div class="mb-3">
-      <div class="yellow-line mb-2"></div>
-      <h2 class="fw-bold text-uppercase m-0" style="font-size: 32px;">Who We Are</h2>
-    </div>
-    <div class="p-4 bg-white bg-opacity-75 rounded shadow">
-      <p>We are a ISO 9001 : 2015 certified company with team of experts in Surface Augmentation technology with attention to details.</p>
-      <p>Team of Navisthaa is adept with requisite business resources thereby helping our client meet their requirement with optimal efficiency.</p>
-      <p>Having strong background of design & print industry, we help by enhancing the current offerings to next level.</p>
-    </div>
-  </div>
 
-  <!-- OUR VISION -->
-  <div class="col-md-5 mb-6">
-    <div class="mb-3">
-      <div class="yellow-line mb-2"></div>
-      <h2 class="fw-bold text-uppercase  " style="font-size: 32px;">Our Vision</h2>
-    </div>
-    <div class="p-4 bg-white bg-opacity-75 rounded shadow">
-      <p>Navisthaa is a world-class company that provides surface augmentation technology
-for visual management and design communication.</p>
-      <p>To spearhead the consortium of companies and provide profitable business solutions.</p>
-            <p>To spearhead the consortium of companies and provide profitable business solutions.</p>
-    </div>
-  </div>
+      <!-- WHO WE ARE -->
+      <div class="col-md-12 mb-4">
+        <div class="mb-3">
+          <div class="yellow-line mb-2"></div>
+          <h2 class="fw-bold text-uppercase m-0" style="font-size: 32px;">Who We Are</h2>
+        </div>
+        <div class="p-4 bg-white bg-opacity-75 rounded shadow">
+          <p>Navisthaa Solutions is the Surface Augmentation specialist working with OEMs and Tier 1 Automotive Companies focused on elevating vehicle identity and perceived quality. We provide customised design and manufacturing expertise for integrated accessories—from Mood Lights and Interactive Surfaces to Soft Emblems and Sustainable merchandising —ensuring compliance, durability, and seamless integration into premium vehicle fleets.</p>
+        
+        </div>
+      </div>
 
-  <!-- OUR MISSION -->
-  <div class="col-md-5 mb-6 ">
-    <div class="mb-3">
-      <div class="yellow-line mb-2"></div>
-      <h2 class="fw-bold text-uppercase"style="font-size: 32px;">Our Mission</h2>
+      <!-- OUR VISION -->
+      <div class="col-md-6 mb-4">
+        <div class="mb-3">
+          <div class="yellow-line mb-2"></div>
+          <h2 class="fw-bold text-uppercase" style="font-size: 32px;">Our Vision</h2>
+        </div>
+        <div class="p-4 bg-white bg-opacity-75 rounded shadow">
+          <p>Navisthaa, a surface augmentation specialist aspiring to provide sustainable business solutions across the globe.</p><br>
+
+        </div>
+      </div>
+
+      <!-- OUR MISSION -->
+      <div class="col-md-6 mb-4">
+        <div class="mb-3">
+          <div class="yellow-line mb-2"></div>
+          <h2 class="fw-bold text-uppercase" style="font-size: 32px;">Our Mission</h2>
+        </div>
+        <div class="p-4 bg-white bg-opacity-75 rounded shadow">
+          <p>To exceed customer expectations by providing surface enhancing solutions, creating designs, innovative products and amalgamation of processes.</p>
+        </div>
+      </div>
+
     </div>
-    <div class="p-4 bg-white bg-opacity-75 rounded shadow">
-      <p>To spearhead the consortium of companies and provide profitable business solutions.</p>
-            <p>To spearhead the consortium of companies and provide profitable business solutions.</p>
-                  <p>To spearhead the consortium of companies and provide profitable business solutions.</p>
-    </div>
-  </div>
-</div>
+
   </div>
 </section>
+<section id="owner" class="py-5 text-white" style="background-color: #d1d1d1;">
+  <div class="container text-center">
+    <h2 class="fw-bold text-black mb-4" style="font-size: 32px;">OUR TEAM</h2>
+
+    <div class="team-row">
+
+      <!-- Member 1 -->
+      <div class="team-card">
+        <img src="C:\Users\SHREYASH\OneDrive\Desktop\updateNavista\img\ram.jpeg"
+             class="rounded-circle border border-3 border-black shadow team-img" alt="Rahul Mehta">
+        <h5 class="fw-bold text-black mt-3" style="font-size: 20px;">Mr. Ram Bhagwat</h5>
+        <p class="text-black fw-bold mb-1">Managing Director</p>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="team-card">
+        <img src="https://static.wixstatic.com/media/7e294e_15f833b7ac444e1c834f57db91f63a5a~mv2.jpg"
+             class="rounded-circle border border-3 border-black shadow team-img" alt="Rahul Mehta">
+        <h5 class="fw-bold text-black mt-3" style="font-size: 20px;">Mr. Rahul Mehta</h5>
+        <p class="text-black fw-bold mb-1">Business Development</p>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="team-card">
+        <img src="https://static.wixstatic.com/media/7e294e_c029bef102334560a61a1d690ff03627~mv2.jpg"
+             class="rounded-circle border border-3 border-black shadow team-img" alt="Nehal Parikh">
+        <h5 class="fw-bold text-black mt-3"style="font-size: 20px;">Ms. Nehal Parikh</h5>
+        <p class="text-black fw-bold mb-1">Head Design</p>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="team-card">
+        <img src="https://static.wixstatic.com/media/7e294e_eea65ccd098a491e9c1f2810366fcfff~mv2.jpg"
+             class="rounded-circle border border-3 border-black shadow team-img" alt="Sravan Kumar">
+        <h5 class="fw-bold text-black mt-3" style="font-size: 20px;">Mr. Sravan Kumar</h5>
+        <p class="text-black fw-bold mb-1">Head Operations</p>
+      </div>
+
+      <!-- Member 5 -->
+      <div class="team-card">
+        <img src="https://static.wixstatic.com/media/7e294e_4bc8edb362d54c738ac016daed14e44c~mv2.jpg"
+             class="rounded-circle border border-3 border-black shadow team-img" alt="Ramanand Borse">
+        <h5 class="fw-bold text-black mt-3 " style="font-size: 20px;">Mr. Ramanand Borse</h5>
+        <p class="text-black fw-bold mb-1">Global Sales</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Images scale with viewport width so 5 always fit in one row */
+.team-img {
+  width: 16vw;
+  height: 16vw;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 70px;
+  min-height: 70px;
+  object-fit: cover;
+}
+
+/* Center text & keep it neat */
+.team-card h5,
+.team-card p {
+  font-size: 0.9rem;
+}
+
+/* Optional: tweak text size on very small screens */
+@media (max-width: 576px) {
+  .team-card h5 {
+    font-size: 0.8rem;
+  }
+  .team-card p {
+    font-size: 0.7rem;
+  }
+}
+
+</style>
 
   
 
@@ -601,197 +691,169 @@ for visual management and design communication.</p>
     <!-- row 1 -->
     <div class="row g-4 justify-content-center mb-3" style="height: 100%;">
 
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card offer-card border-0 shadow bg-secondary text-black">
+      <div class="col-md-4 h-100" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card offer-card border-0 shadow bg-secondary text-black"style="height: 200px;display: flex;flex-direction: column;justify-content: center;">
           <div class="card-body text-center">
             <i class="fa-solid fa-screwdriver-wrench fa-2x mb-3 text-dark"></i>
-            <h5 class="card-title ">Design</h5>
-            <p class="card-text">At Navisthaa Solutions, design is at the core of innovation. Our team blends aesthetics with functionality to craft OEM-grade visual and structural components, ensuring every concept aligns with global automotive standards and brand identities.</p>
-          </div>
+            <h5 class="card-title ">Design Excellence</h5>
+            <p class="card-text">We design with purpose. Every accessory is engineered to solve a real user problem while maintaining perfect compatibility with OEM vehicle platforms. Our design approach blends precision, durability, and simplicity—resulting in products that look refined and perform flawlessly in real-world conditions.         </div>
         </div>
       </div>
 
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-        <div class="card offer-card border-0 shadow bg-secondary text-black">
+      <div class="col-md-4 h-100" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card offer-card border-0 shadow bg-secondary text-black"style="height: 200px;display: flex;flex-direction: column;justify-content: center;">
           <div class="card-body text-center">
             <i class="fa-solid fa-car-side fa-2x mb-3 text-dark"></i>
-            <h5 class="card-title">Manufacturing</h5>
-            <p class="card-text">We offer integrated and scalable manufacturing capabilities, delivering high-precision components through advanced technologies.</p>
-          </div>
+            <h5 class="card-title">New Product Development</h5>
+            <p class="card-text">Our NPD framework moves products from concept to validation with speed and clarity. Each stage—design, engineering, prototyping, testing, compliance—is tightly controlled to ensure predictability and market readiness.                                                                             </div>
         </div>
       </div>
 
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-        <div class="card offer-card border-0 shadow bg-secondary text-black">
+      <div class="col-md-4 h-100" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card offer-card border-0 shadow bg-secondary text-black" style="height: 200px;display: flex;flex-direction: column;justify-content: center;">
           <div class="card-body text-center">
             <i class="fa-solid fa-gears fa-2x mb-3 text-dark"></i>
-            <h5 class="card-title">Processes</h5>
-            <p class="card-text">Smart gadgets like GPS trackers, dash cams, and wireless chargers.</p>
+            <h5 class="card-title">Mass Production Capability</h5>
+            <p class="card-text">With our consortium partners, our production ecosystem is designed for scale, consistency, and efficiency. From raw material sourcing to final packaging, we use controlled processes that match OEM expectations. Lean manufacturing and real-time quality monitoring ensure reliability at every stage.</p>
           </div>
         </div>
       </div>
 
     </div><!-- row 1 end -->
-
-
-    <!-- row 2 -->
-    <div class="row g-4 justify-content-center">
-
-      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
-        <div class="card offer-card border-0 shadow bg-secondary text-black">
-          <div class="card-body text-center">
-            <i class="fa-solid fa-briefcase fa-2x mb-3 text-dark"></i>
-            <h5 class="card-title">Sourcing</h5>
-            <p class="card-text">We operate an agile sourcing network across Asia and beyond, ensuring reliable access to high-grade raw materials, specialized components, and cost-efficient supply chains.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
-        <div class="card offer-card border-0 shadow bg-secondary text-black">
-          <div class="card-body text-center">
-            <i class="fa-solid fa-sack-dollar fa-2x mb-3 text-dark"></i>
-            <h5 class="card-title">Sales</h5>
-            <p class="card-text">Navisthaa’s dedicated sales team partners with global OEMs and Tier-1 suppliers, offering tailored accessory and component solutions that align with regional market trends and consumer preferences.</p>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- row 2 end -->
-
   </div>
 </section>
 
-<!-- OUR OFFERING-->
 
-<section class="py-5 bg-white">
+<!-- Product Categories-->
+<section id="product" class="py-5">
   <div class="container">
+    
+    <!-- Heading -->
     <div class="row mb-4">
       <div class="col-12">
         <h2 class="fw-bold text-dark">
-          <span style="border-left: 10px solid #f1c40f; padding-left: 10px; font-size: 32px;" >OUR OFFERINGS</span>
+          <span style="border-left: 10px solid #f1c40f; padding-left: 10px;">OUR KEYPRODUCTS</span>
         </h2>
       </div>
     </div>
-    <div class="row">
-      <!-- Left Column -->
-      <div class="col-md-6 mb-4">
-        <h5 class="fw-bold text-dark"><a href="images.html" class="text-dark text-decoration-none d-block"> PRODUCT</a></h5>
-        <ul class="list-unstyled text-secondary">
-          <li>Screen Printed Decals</a></li>
-          <li>Soft Emblems</li>
-          <li>Dome Logos</li>
-          <li>Automotive Dials</li>
-          <li>Exterior & Interior Styling Kit</li>
-          <li>Caution, Security & Warning Labels (Tamper Proof or void)</li>
-          <li>Gaskets, Foam Die Cuts Labels</li>
-          <li>Insulators (High Temp Thermal Insulation)</li>
-          <li>FSR & Illuminated Panels</li>
-          <li>Climate Controller Labels</li>
-        </ul>
 
-        <h5 class="fw-bold text-dark mt-4"> <a class="text-dark text-decoration-none d-block">WHITE GOODS PRODUCTS :</a></h5>
-        <ul class="list-unstyled text-secondary">
-          <li>Fascias / Overlays</li>
-          <li>Membrane Switches</li>
-        </ul>
-      </div>
-
-      <!-- Right Column -->
-      <div class="col-md-6 mb-4">
-        <h5 class="fw-bold text-dark"><a class="text-dark text-decoration-none d-block">PROCESSES :</a></h5>
-        <ul class="list-unstyled text-secondary">
-          <li>Screen Printing</li>
-          <li>Hydro-graphics</li>
-          <li>TOM Technology</li>
-          <li>3D Forming</li>
-          <li>Thermoforming</li>
-          <li>Injection Molding</li>
-          <li>IMD</li>
-        </ul>
-
-        <h5 class="fw-bold text-dark mt-4"><a class="text-dark text-decoration-none d-block">SOURCING :</a></h5>
-        <ul class="list-unstyled text-secondary">
-          <li>Protection Films</li>
-          <li>Overcoats</li>
-          <li>PU Resins</li>
-          <li>Poly-Carbonate Films</li>
-          <li>Fasteners</li>
-          <li>DS Foam Tapes</li>
-          <li>Solvent & Water based Adhesives</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Product Categories-->
-<section id="product" class="py-5" >
-  <div class="container" >
-     <div class="row mb-4">
-      <div class="col-12">
-        <h2 class="fw-bold text-dark">
-          <span style="border-left: 10px solid #f1c40f; padding-left: 10px;" style="font-size: 32px;">OUR KEYPRODUCTS</span>
-        </h2>
-      </div>
-    </div>
     <div class="row g-4">
-      <!-- Feature 1 -->
-      <div class="col-md-6 col-lg-3">
-        <a href="product.html" class="text-decoration-none">
-        <div class="feature-card">
-         
-          <div class="feature-title"> SURFACE AUGMENTATION</div></a>
-          <div class="feature-text">
-            Elaborate on the factor or feature you mentioned above. Use this as an opportunity to attract your users to opt for your offer.
-          </div>
-        </div>
-        
-      </div>
-      <!-- Feature 2 -->
-      <div class="col-md-6 col-lg-3" >
-        <a href="illuminated-products.html" class="text-decoration-none">
-        <div class="feature-card">
-          
-          <div class="feature-title ">SURFACE ILLUMINATION
 
-          </div></a>
-          <div class="feature-text">
-            Elaborate on the factor or feature you mentioned above. Use this as an opportunity to attract your users to opt for your offer.
+      <!-- Feature 1: Exterior -->
+      <div class="col-md-6 col-lg-4">
+        <a href="product.html" class="text-decoration-none">
+          <div class="feature-card">
+
+            <div class="feature-title " style="text-align: center;">EXTERIOR KIT</div>
+        </a>
+
+            <div class="feature-text">
+              <span class="short-text">
+                Our exterior kits are engineered to enhance both performance and presence. Each component—from claddings to guards.
+                
+             
+              </span>
+
+              <span class="full-text d-none">
+                Our exterior kits are engineered to enhance both performance and presence. Each component—from claddings to guards to styling elements—is designed for OEM-grade fitment, weather endurance, and long-term durability. With precision tooling and high-impact materials, our exterior accessories elevate the vehicle’s road appeal while offering real-world protection and reliability.
+              </span>
+
+               <a href="product.html" > Know More..</a>
+            </div>
+
           </div>
-        </div>
       </div>
-      <!-- Feature 3 -->
-      <div class="col-md-6 col-lg-3">
-        <a href="sustainable-product.html" class="text-decoration-none" >
-        <div class="feature-card">
-          
-          <div class="feature-title">SUSTAINABLITY</div></a>
-          <div class="feature-text">
-            Elaborate on the factor or feature you mentioned above. Use this as an opportunity to attract your users to opt for your offer.
+
+
+      <!-- Feature 2: Interior -->
+      <div class="col-md-6 col-lg-4">
+        <a href="product.html" class="text-decoration-none">
+          <div class="feature-card">
+
+            <div class="feature-title"style="text-align: center;">INTERIOR KIT</div>
+        </a>
+
+            <div class="feature-text">
+              <span class="short-text">
+                Our interior kits combine ergonomic comfort with functional innovation. Built around user experience.
+              </span>
+
+              <span class="full-text d-none">
+                Our interior kits combine ergonomic comfort with functional innovation. Built around user experience, every accessory seamlessly integrates with the cabin environment, offering better utility, cleaner aesthetics, and premium tactile feel. From organizers to comfort components, each product is validated for safety, durability, and everyday practicality, making every drive more refined.
+              </span>
+
+               <a href="product.html" > Know More..</a>
+            </div>
+
           </div>
-        </div>
       </div>
-      <!-- Feature 4 -->
-      <div class="col-md-6 col-lg-3">
-        <a href="merchandising.html" class="text-decoration-none">
-        <div class="feature-card">
-          
-          <div class="feature-title">TRACKED PRODUCTS</div></a>
-          <div class="feature-text">
-            Elaborate on the factor or feature you mentioned above. Use this as an opportunity to attract your users to opt for your offer.
+
+
+      <!-- Feature 3: Sustainable -->
+      <div class="col-md-6 col-lg-4">
+        <a href="product.html" class="text-decoration-none">
+          <div class="feature-card">
+
+            <div class="feature-title"style="text-align: center;">SUSTAINABLE PRODUCTS</div>
+        </a>
+
+            <div class="feature-text">
+              <span class="short-text">
+                Our sustainable product line is built for the future—combining eco-friendly materials with uncompromising performance.
+              </span>
+
+              <span class="full-text d-none">
+                Our sustainable product line is built for the future—combining eco-friendly materials with uncompromising performance. From recycled polymers to biodegradable packaging, we design green accessories/ merchandising that meet global standards without inflating cost or reducing durability. These products help OEMs and brands meet sustainability goals while offering customers planet-friendly choices they can trust.
+              </span>
+
+              
+              <a href="product.html" > Know More..</a>
+            </div>
+
           </div>
-        </div>
       </div>
+
     </div>
   </div>
 </section>
+<script>
+  document.querySelectorAll(".read-more-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
 
+      const parent = this.parentElement;
+      const shortText = parent.querySelector(".short-text");
+      const fullText = parent.querySelector(".full-text");
+
+      if (fullText.classList.contains("d-none")) {
+        fullText.classList.remove("d-none");
+        shortText.classList.add("d-none");
+        this.textContent = "Read Less";
+      } else {
+        fullText.classList.add("d-none");
+        shortText.classList.remove("d-none");
+        this.textContent = "Read More...";
+      }
+    });
+  });
+</script>
+
+<!-- IMG -->
+<section class="py-5 bg-dark">
+  <div class="container-fluid text-center py-1">
+    <h2 class="text-white mb-4">EXTERIOR & INTERIOR STYLING KIT</h2>
+
+    <img src="C:\Users\SHREYASH\OneDrive\Desktop\updateNavista\img\car.jpeg" 
+         alt="Car Styling Kit" 
+         class="img-fluid "
+         style=" width: 70%; object-fit: contain;">
+  </div>
+</section>
 
 
 <!-- Clients Section -->
 <section id="Clients" class="bg-white py-5">
   <div class="container">
+
     <!-- Title -->
     <div class="row align-items-start mb-4">
       <div class="col-md-12 d-flex align-items-center">
@@ -802,156 +864,24 @@ for visual management and design communication.</p>
       </div>
     </div>
 
-    <!-- Carousel -->
-    <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-      <div class="carousel-inner text-center">
+    <!-- All Client Logos Grid -->
+    <div class="row text-center g-4 justify-content-center">
 
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="container-fluid">
-          <div class="row justify-content-center">
-            <div class="col-6 col-sm-4 col-md-2 mb-3">
-              <div class="card p-3 shadow-sm border-0">
-                <img src="https://i.ibb.co/QjY9GbXX/image.png" class="img-fluid" alt="VW">
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2 mb-3">
-              <div class="card p-3 shadow-sm border-0">
-                <img src="https://i.ibb.co/LX2hmS42/image.png" class="img-fluid" alt="Skoda">
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2 mb-3">
-              <div class="card p-3 shadow-sm border-0">
-                <img src="https://i.ibb.co/SwGQ0jYS/image.png" class="img-fluid" alt="Stellantis">
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2 mb-3">
-              <div class="card p-3 shadow-sm border-0">
-                <img src="https://i.ibb.co/xtR0XX6c/image.png" class="img-fluid" alt="NTF">
-              </div>
-            </div>
-            
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 (add more logos here) -->
-        <div class="carousel-item active">
-          <div class="container-fluid">
-          <div class="row justify-content-center">
-            <div class="col-6 col-sm-4 col-md-2 mb-3">
-              <div class="card p-3 shadow-sm border-0">
-                <img src="https://i.ibb.co/2YfXJ7Wg/image.png" class="img-fluid" alt="Reliance">
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2 mb-3">
-              <div class="card p-3 shadow-sm border-0">
-                <img src="https://i.ibb.co/Qw8mZWz/image.png" class="img-fluid" alt="Kessebohmer">
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2 mb-3">
-              <div class="card p-3 shadow-sm border-0">
-                <img src="https://i.ibb.co/JRKHb64T/image.png" class="img-fluid" alt="CNH">
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2 mb-3">
-              <div class="card p-3 shadow-sm border-0">
-                <img src="https://i.ibb.co/rGBFMVVM/image.png"  class="img-fluid" alt="mutual automotive">
-              </div>
-            </div>
-            
-            </div>
-          </div>
-        </div>
-
+      <div class="col-12">
+        <img src="C:\Users\SHREYASH\OneDrive\Desktop\updateNavista\img\image (2).png" class="img-fluid p-2 shadow-sm bg-white rounded" />
       </div>
 
-      <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#clientCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+     
     </div>
+
   </div>
 </section>
 
 
-<!-- IMG -->
-<section class="py-10 bg-dark">
-  <div class="container text-center">
-    <h2 class="text-white mb-4">EXTERIOR & INTERIOR STYLING KIT</h2>
-    <img src="https://static.wixstatic.com/media/7e294e_6d8698e67692442c97f12c1e35a8ac24~mv2.jpg/v1/fill/w_1901,h_781,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7e294e_6d8698e67692442c97f12c1e35a8ac24~mv2.jpg" alt="Car Styling Kit" class="img-fluid w-100 " style="width: 100%;height: 100%; object-fit: contain; overflow: hidden;padding: 0%;">
-  </div>
-</section>
 
 
-<!-- Owner Section -->
-<section id="owner" class="py-5   text-white img-fluid" style="background-color: #d1d1d1;">
-  <div class="container text-center">
-    <h2 class="fw-bold text-black mb-0" style="font-size: 32px; line-height: 1.1;">OUR TEAM</h2>
-    <div id="ownerCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
 
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="row justify-content-center">
-            <div class="col-md-3 mb-4">
-              <img src="https://static.wixstatic.com/media/7e294e_15f833b7ac444e1c834f57db91f63a5a~mv2.jpg/v1/fill/w_366,h_403,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/RAHUL.jpg"
-                   class="rounded-circle mb-3 border border-3 border-black shadow img-fluid"  style="width:250px; height:250px; object-fit:cover;"
-                   
-                   alt="Owner Photo">
-              <h5 class="fw-bold text-black">Mr. Rahul Mehta</h5>
-              <p class="text-black fw-bold mb-1">Business Development</p>
-              <p class="text-muted mx-auto" style="max-width: 300px;">
-                Passionate about automotive innovation and excellence.
-              </p>
-            </div>
-            <div class="col-md-3 mb-4">
-              <img src="https://static.wixstatic.com/media/7e294e_c029bef102334560a61a1d690ff03627~mv2.jpg/v1/fill/w_366,h_403,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/nehal.jpg"
-                   class="rounded-circle mb-3 border border-3 border-black  shadow img-fluid"  style="width:250px; height:250px; object-fit:cover;"
-                   alt="Owner Photo">
-              <h5 class="fw-bold text-black">Ms.Nehal Parikh</h5>
-              <p class="text-black fw-bold mb-1">Head Design</p>
-              <p class="text-muted mx-auto" style="max-width: 300px;">
-                Bringing creative vision to every product design.
-              </p>
-            </div>
 
-             <div class="col-md-3 mb-4">
-              <img src=" https://static.wixstatic.com/media/7e294e_eea65ccd098a491e9c1f2810366fcfff~mv2.jpg/v1/crop/x_8,y_0,w_580,h_623/fill/w_366,h_403,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/sravan.jpg"
-                   class="rounded-circle mb-3 border border-3 border-black  shadow img-fluid"  style="width:250px; height:250px; object-fit:cover;"
-                   alt="Owner Photo">
-              <h5 class="fw-bold text-black">Mr.Sravan Kumar</h5>
-              <p class="text-black fw-bold mb-1">Head Opertions</p>
-              <p class="text-muted mx-auto" style="max-width: 300px;">
-                Driving brand awareness across all platforms.
-              </p>
-            </div>
-            <div class="col-md-3 mb-4">
-              <img src=" https://static.wixstatic.com/media/7e294e_4bc8edb362d54c738ac016daed14e44c~mv2.jpg/v1/fill/w_366,h_403,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ram.jpg"
-                   class="rounded-circle mb-3 border border-3 border-black  shadow img-fluid"  style="width:250px; height:250px; object-fit:cover;"
-                   alt="Owner Photo">
-              <h5 class="fw-bold text-black">Mr.Ramanand Borse</h5>
-              <p class="text-black fw-bold mb-1">Global Sales</p>
-              <p class="text-muted mx-auto" style="max-width: 300px;">
-                Expert in smart tech & product integration.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        
-
-      </div>
-
-      
-    </div>
-  </div>
-</section>
 
 <!-- Certificate-->
 
@@ -980,12 +910,12 @@ for visual management and design communication.</p>
       <!-- Left Text Content -->
       <div class="col-md-6">
         
-        <h2 class="fw-bold display-6 text-white">GLOBAL<br>PRESENCE</h2>
-        <b class="mt-4 text-white ">
+        <h2 class="fw-bold display-6 text-dark">GLOBAL<br>PRESENCE</h2>
+        <b class="mt-4 text-dark ">
           Extending our services to UAE, Australia & ASEAN regions. Having global experience in catering to region-specific requirements gives Navisthaa a unique edge in International Market. 
           Spearheading Brand India and promoting Make-In-India is what we take pride in.
         </b><br>
-        <b>
+        <b class="text-dark">
           Our global footprints have begun with Australia, Indonesia & Middle East Asia. 
           Regional connectivity and end-to-end solutions are helping us keep our customers happy.
         </b>
@@ -1059,7 +989,7 @@ for visual management and design communication.</p>
 </head>
 <body>
 
-<div class="contact-container">
+<div id="Contact" class="contact-container">
   
   <div class="yellow-bar"></div>
   <h2>GET IN TOUCH</h2>
@@ -1092,8 +1022,26 @@ for visual management and design communication.</p>
         Bidadi Hobli Ramanagara,<br>
         Bangalore, Rural KA 562109. INDIA
         <br><br>
-        <b>ram.borse@navisthaa.com</b>
+        <b>ram.borse@navisthaa.com</b><br><br><br>
+      <div>
+         <h5 class="text-dark mb-3">Follow Us</h5>
+        <hr class="text-secondary" style="margin-top: -10px; width: 100px;">
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://www.instagram.com/navisthaa_solutions/?hl=en" target="_blank" class="text-decoration-none text-dark d-block py-1">
+            <i class="fab fa-instagram me-2"></i> Instagram
+            </a>
+         </li>
+         <li>
+           <a href="https://www.linkedin.com/in/navisthaa-solutions-68162a21b" target="_blank" class="text-decoration-none text-dark d-block py-1">
+           <i class="fab fa-linkedin me-2"></i> LinkedIn
+          </a>
+          </li>
+        </ul>
+      </div>  
     </div>
+   
 
   </div>
 
@@ -1103,69 +1051,6 @@ for visual management and design communication.</p>
 </html>
 
     
-<!-- Our offering SECTION -->
- 
-<section id="offerings-section" class="py-4" style="background-color: #1b1a1a;">
-  <div class="container text-center">
-    <h2 class="mb-4 text-white" style="font-size: 32px;">Quick Links</h2>
-  </div>
-  <div class="container">
-    <div class="row">
-     <div class="col-md-4">
-  <h5 class="text-light mb-3">Follow Us</h5>
-  <hr class="text-secondary" style="margin-top: -10px; width: 100px;">
-
-  <ul class="list-unstyled">
-    <li>
-      <a href="https://www.instagram.com/navisthaa_solutions/?hl=en" target="_blank" class="text-decoration-none text-light d-block py-1">
-        <i class="fab fa-instagram me-2"></i> Instagram
-      </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/navisthaa-solutions-68162a21b" target="_blank" class="text-decoration-none text-light d-block py-1">
-        <i class="fab fa-linkedin me-2"></i> LinkedIn
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-      
-
-      <div class="col-md-4">
-        <h5 class="text-light mb-3">Certifications</h5>
-        <hr class="text-secondary" style="margin-top: -10px; width: 100px;">
-
-        <ul class="list-unstyled">
-          <li><a class="text-decoration-none text-light d-block py-1"> ISO9001</a></li>
-        </ul>
-      </div>
-
-       <div class="col-md-4">
-        <h5 class="text-light mb-3">Global Presence</h5>
-        <hr class="text-secondary" style="margin-top: -10px; width: 100px;">
-
-        <ul class="list-unstyled">
-          <li><a class="text-decoration-none text-light d-block py-1"> Indonesia</a></li>
-          <li><a class="text-decoration-none text-light d-block py-1"> UAE</a></li>
-          <li><a class="text-decoration-none text-light d-block py-1"> Latam</a></li>
-          <li><a class="text-decoration-none text-light d-block py-1"> Europe</a></li>
-          <li><a class="text-decoration-none text-light d-block py-1"> Australia</a></li>
-          <li><a class="text-decoration-none text-light d-block py-1"> USA</a></li>
-        </ul>
-      </div>
-  
-
-    </div>
-  </div>
-
-</section>
-
-
-
-
-
-
   
   <!-- Style -->
   <style>
