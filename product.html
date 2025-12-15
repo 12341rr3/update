@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exterior Products</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= GLOBAL ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+html, body{
+  height:100%;
+  overflow:hidden;
+}
+
+body{
+  background:#000;
+  color:#fff;
+}
+
+/* ================= HERO ================= */
+.hero{
+  height:100vh;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  padding:60px 80px;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.25)),
+    url("C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/WEBSITE EXTERIOR image2.jpg")
+    center/cover no-repeat;
+}
+
+/* ================= LEFT CONTENT ================= */
+.hero-content{ max-width:760px; }
+
+.accent{
+  width:60px;
+  height:6px;
+  background:#f1c40f;
+  margin-bottom:20px;
+}
+
+.hero h1{ font-size:42px; font-weight:700; }
+.hero h2{ font-size:18px; color:#ccc; margin:14px 0 22px; }
+.hero p{
+  font-size:13.5px;
+  line-height:1.65;
+  max-width:540px;
+  color:#ddd;
+}
+
+/* ================= CAROUSEL ================= */
+.carousel-content{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  margin-top:30px;
+}
+
+/* ================= CARD GRID ================= */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+  max-width:740px;
+}
+
+.product-card{
+  background:#fff;
+  border-radius:20px;
+  height:160px;
+  overflow:hidden;
+  cursor:pointer;
+  box-shadow:0 14px 35px rgba(0,0,0,0.45);
+  transition:0.3s ease;
+}
+
+.product-card:hover{
+  transform:translateY(-6px);
+}
+
+.product-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+/* ================= ARROWS ================= */
+.carousel-control-prev,
+.carousel-control-next{
+  width:55px;
+  opacity:1;
+  z-index:10;
+}
+
+.carousel-control-prev{ left:-70px; }
+.carousel-control-next{ right:-70px; }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  width:36px;
+  height:36px;
+  filter:invert(100%);
+}
+
+/* ================= IMAGE POPUP ================= */
+.image-popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s ease;
+  z-index:9999;
+}
+
+.image-popup.show{
+  opacity:1;
+  visibility:visible;
+}
+
+.image-popup img{
+  max-width:60%;
+  max-height:60%;
+  border-radius:12px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.8);
+}
+
+.close-btn{
+  position:absolute;
+  top:25px;
+  right:35px;
+  font-size:40px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:992px){
+  html, body{ overflow:auto; }
+
+  .hero{
+    grid-template-columns:1fr;
+    padding:50px 25px;
+    height:auto;
+    min-height:100vh;
+  }
+
+  .card-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .carousel-control-prev{ left:-45px; }
+  .carousel-control-next{ right:-45px; }
+}
+
+@media(max-width:576px){
+  .product-card{ height:130px; }
+  .image-popup img{
+    max-width:95%;
+    max-height:75%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+  <!-- LEFT -->
+  <div class="hero-content">
+
+    <div class="accent"></div>
+    <h1>EXTERIOR PRODUCTS</h1>
+    <h2>Enhancing Visibility, Style & Brand Identity</h2>
+
+    <p>
+      Our exterior kits are engineered to enhance both performance and presence. Each component—from claddings to guards to styling elements—is designed for OEM-grade fitment, weather endurance, and long-term durability. With precision tooling and high-impact materials, our exterior accessories elevate the vehicle’s road appeal while offering real-world protection and reliability.
+    </p>
+
+    <!-- CAROUSEL -->
+    <div id="cardCarousel" class="carousel slide" data-bs-ride="false">
+
+      <div class="carousel-inner">
+
+        <!-- SLIDE 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-content">
+            <div class="card-grid">
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/1 (3).jpg">
+              </div>
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/1 (3).jpg">
+              </div>
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/1 (3).jpg">
+              </div>
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/1 (3).jpg">
+              </div>
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/1 (3).jpg">
+              </div>
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/1 (3).jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="carousel-item">
+          <div class="carousel-content">
+            <div class="card-grid">
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/1 (3).jpg">
+              </div>
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/1 (3).jpg">
+              </div>
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/1 (3).jpg">
+              </div>
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/1 (3).jpg">
+              </div>
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/1 (3).jpg">
+              </div>
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="C:/Users/SHREYASH/OneDrive/Desktop/updateNavista/img/1 (3).jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ARROWS -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <style>
+
+        .carousel-control-prev-icon,
+.carousel-control-next-icon{
+  filter: invert(64%) sepia(90%) saturate(600%) hue-rotate(360deg);
+}
+      </style>
+    </div>
+  </div>
+
+</section>
+
+<!-- IMAGE POPUP -->
+<div id="imagePopup" class="image-popup" onclick="closePopup()">
+  <span class="close-btn">&times;</span>
+  <img id="popupImg">
+</div>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function openPopup(card){
+  const img = card.querySelector("img");
+  document.getElementById("popupImg").src = img.src;
+  document.getElementById("imagePopup").classList.add("show");
+}
+
+function closePopup(){
+  document.getElementById("imagePopup").classList.remove("show");
+}
+</script>
+
+</body>
+</html>
