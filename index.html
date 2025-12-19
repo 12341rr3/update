@@ -679,7 +679,7 @@ setInterval(() => {
     <div class="team-row">
 
       <!-- Member 1 -->
-      <div class="team-card">
+      <div class="team-card text-center">
         <img src="https://i.ibb.co/Q7j89jTh/ram.jpg"
              class="rounded-circle border border-3 border-black shadow team-img" alt="Ram Bhagwat">
         <h5 class="fw-bold text-black mt-3" style="font-size: 20px;">Mr. Ram Bhagwat</h5>
@@ -687,7 +687,7 @@ setInterval(() => {
       </div>
 
       <!-- Member 2 -->
-      <div class="team-card">
+      <div class="team-card text-center">
         <img src="https://static.wixstatic.com/media/7e294e_15f833b7ac444e1c834f57db91f63a5a~mv2.jpg"
              class="rounded-circle border border-3 border-black shadow team-img" alt="Rahul Mehta">
         <h5 class="fw-bold text-black mt-3" style="font-size: 20px;">Mr. Rahul Mehta</h5>
@@ -695,7 +695,7 @@ setInterval(() => {
       </div>
 
       <!-- Member 3 -->
-      <div class="team-card">
+      <div class="team-card text-center">
         <img src="https://static.wixstatic.com/media/7e294e_c029bef102334560a61a1d690ff03627~mv2.jpg"
              class="rounded-circle border border-3 border-black shadow team-img" alt="Nehal Parikh">
         <h5 class="fw-bold text-black mt-3" style="font-size: 20px;">Ms. Nehal Parikh</h5>
@@ -703,7 +703,7 @@ setInterval(() => {
       </div>
 
       <!-- Member 4 -->
-      <div class="team-card">
+      <div class="team-card text-center">
         <img src="https://static.wixstatic.com/media/7e294e_eea65ccd098a491e9c1f2810366fcfff~mv2.jpg"
              class="rounded-circle border border-3 border-black shadow team-img" alt="Sravan Kumar">
         <h5 class="fw-bold text-black mt-3" style="font-size: 20px;">Mr. Sravan Kumar</h5>
@@ -711,7 +711,7 @@ setInterval(() => {
       </div>
 
       <!-- Member 5 -->
-      <div class="team-card">
+      <div class="team-card text-center">
         <img src="https://static.wixstatic.com/media/7e294e_4bc8edb362d54c738ac016daed14e44c~mv2.jpg"
              class="rounded-circle border border-3 border-black shadow team-img" alt="Ramanand Borse">
         <h5 class="fw-bold text-black mt-3" style="font-size: 20px;">Mr. Ramanand Borse</h5>
@@ -1202,9 +1202,17 @@ setInterval(() => {
     }
 
     .contact-container {
-      max-width: 950px;
+      padding-left: 110px;
       margin: 60px auto;
     }
+    /* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+  .contact-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 30px auto;
+  }
+}
 
     h2 {
       font-weight: 700;
@@ -1266,42 +1274,39 @@ setInterval(() => {
     <!-- LEFT FORM -->
     <div class="col-md-7">
 
-      <label>Enter Your Name *</label>
-      <input type="text" class="form-control mb-3" placeholder="Name">
+      <label class="form-label-custom">Enter Your Name *</label>
+      <input type="text " class="form-control mb-3"  placeholder="Name">
 
-      <label>Enter Your Email *</label>
+      <label class="form-label-custom">Enter Your Email *</label>
       <input type="email" class="form-control mb-3" placeholder="Email">
 
-      <label>Enter Your Subject</label>
+      <label class="form-label-custom">Enter Your Subject</label>
       <input type="text" class="form-control mb-3" placeholder="Subject">
 
-      <label>Enter Your Message</label>
+      <label class="form-label-custom">Enter Your Message</label>
       <textarea class="form-control mb-3" rows="5" placeholder="Message"></textarea>
 
-      <button class="btn-submit">Submit</button>
+      <button class="btn-submit" >Submit</button>
     </div>
 <!-- RIGHT ADDRESS -->
+<!-- RIGHT ADDRESS COLUMN -->
 <div class="col-md-5 ps-md-5 mt-4 mt-md-0">
 
+  <!-- ADDRESSES -->
   <div class="address-wrapper-grid">
 
-    <!-- REGISTERED ADDRESS -->
     <div class="address-col">
-      <b>Registered Address</b>
-      <br><br>
+      <b>Registered Address</b><br><br>
       No. 77 / 303, Second Floor,<br>
       Ganesh Enclave, Hejjala,<br>
       Bidadi Hobli Ramanagara,<br>
       Bangalore, KA 562109. INDIA
     </div>
 
-    <!-- DIVIDER -->
     <div class="address-divider"></div>
 
-    <!-- HEADQUARTERS ADDRESS -->
     <div class="address-col">
-      <b>Headquarters Address</b>
-      <br><br>
+      <b>Headquarters Address</b><br><br>
       Navisthaa Solutions Pvt. Ltd.<br>
       C/o Mutual Automotive,<br>
       601, Dev Plaza, 6th Floor,<br>
@@ -1313,14 +1318,15 @@ setInterval(() => {
 
   </div>
 
-  <br><br>
-  <b>ram.borse@navisthaa.com</b>
-  <br><br><br>
+  <!-- EMAIL -->
+  <div class="mt-4">
+    <b>ram.borse@navisthaa.com</b>
+  </div>
 
   <!-- FOLLOW US -->
-  <div>
-    <h5 class="text-dark mb-3">Follow Us</h5>
-    <hr class="text-secondary" style="margin-top: -10px; width: 100px;">
+  <div class="mt-4">
+    <h5 class="text-dark mb-2">Follow Us</h5>
+    <hr class="text-secondary" style="width: 100px;">
 
     <ul class="list-unstyled">
       <li>
@@ -1339,37 +1345,91 @@ setInterval(() => {
   </div>
 
 </div>
-
+</div>
+</div>
+<footer class="site-footer">
+  <p>&copy; 2025 Navisthaa. All rights reserved.</p>
+</footer>
 <style>
-  .address-wrapper-grid{
-  display: grid;
-  grid-template-columns: 1fr 4px 1.4fr; /* 👈 more space to HQ */
-  column-gap: 24px;
+  html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
-.address-divider{
-  background-color: #dcdcdc;
-  width: 4px;
+/* FOOTER */
+.site-footer {
+  width: 100%;
+  background-color: #212529; /* Bootstrap dark */
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
 }
 
-/* Typography */
-.address-col{
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-/* Mobile: stack addresses */
-@media (max-width: 767px){
-  .address-wrapper-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .address-divider{
-    display: none;
-  }
+.site-footer p {
+  margin: 0;
 }
 
 </style>
+
+
+<style>
+.address-wrapper-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* auto for divider */
+  column-gap: 40px;
+  align-items: stretch;
+}
+.form-label-custom {
+  padding-left: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .form-label-custom {
+    padding-left: 0;
+  }
+}
+
+.address-col {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.address-divider {
+  width: 2px;
+  background-color: #d3d3d3;
+  align-self: stretch;
+}
+.address-col:first-child {
+  padding-right: 5px;
+}
+
+.address-col:last-child {
+  padding-left: 5px;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .address-wrapper-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .address-divider {
+    display: none;
+  }
+   .address-col  {
+    margin-top: 25px;
+  }
+}
+
+.address-col{
+  padding-left: 0;
+  padding-right: 0;
+}
+</style>
+
 </body>
 </html>
 
@@ -1387,23 +1447,10 @@ setInterval(() => {
       transform: scale(1.05);
     }
   </style>
-
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <div class="container">
-      <p>&copy; 2025 Navisthaa. All rights reserved.</p>
-     
-    </div>
-  </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
 </script>
-
-
 </body>
-
 </html>
