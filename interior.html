@@ -36,7 +36,7 @@ body{
   width: 100%;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  padding: clamp(40px, 6vw, 80px);
+padding: 40px clamp(40px, 6vw, 80px);
 
   background-image:
     linear-gradient(
@@ -84,7 +84,7 @@ body{
 /* ================= CARD GRID ================= */
 .card-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:26px;
   max-width:740px;
 }
@@ -141,6 +141,7 @@ body{
   transition:0.3s ease;
   z-index:9999;
 }
+
 
 .image-popup.show{
   opacity:1;
@@ -199,10 +200,13 @@ body{
 
 @media(max-width:576px){
   .product-card{ height:130px; }
-  .image-popup img{
-    max-width:95%;
-    max-height:75%;
-  }
+ .image-popup img,
+.image-popup video{
+  max-width:60%;
+  max-height:60%;
+  border-radius:12px;
+  object-fit:contain;
+}
 }
 .balanced-text{
   text-align: justify;
@@ -211,13 +215,58 @@ body{
   line-height: 1.7;
   hyphens: auto;
 }
+
+/* ================= BACK BUTTON ================= */
+.hero{
+  position: relative;   /* REQUIRED */
+}
+
+.back-btn{
+  position: absolute;
+  top: 30px;
+  right: 40px;
+
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #fff;
+  text-decoration: none;
+
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(0,0,0,0.4);
+
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.back-btn:hover{
+  background: #f1c40f;
+  color: #000;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px){
+  .back-btn{
+    top: 20px;
+    right: 20px;
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
-<section class="hero">
 
+<section class="hero">
+  <!-- BACK BUTTON -->
+<a href="index.html#product" class="back-btn">
+  <-Back
+</a>
   <!-- LEFT -->
   <div class="hero-content">
 
@@ -226,7 +275,7 @@ body{
     <h2>Enhancing Visibility, Style & Brand Identity</h2>
 
     <p class="balanced-text">
-         Our interior kits combine ergonomic comfort with functional innovation. Built around user experience, every accessory seamlessly integrates with the cabin environment, offering better utility, cleaner aesthetics, and premium tactile feel. From organizers to comfort components, each product is validated for safety, durability, and everyday practicality, making every drive more refined.
+         Our interior kits combine ergonomic comfort with functional innovation. Built around user experience, every product seamlessly integrates with the cabin environment, offering better utility, cleaner aesthetics, and premium tactile feel. From organizers to comfort components, each product is validated for safety, durability, and everyday practicality, making every drive more refined.
  
       </p>
 
@@ -241,14 +290,12 @@ body{
             <div class="card-grid">
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/Gfd4TJSc/neck-pillow-2.jpg","text":"Comfort-Kit"},
-                              {"src":"https://i.ibb.co/LXdWpPgT/neck-pillow.jpg","text":"Comfort-Kit"},
-                              {"src":"https://i.ibb.co/9HW47bWH/pillow.jpg","text":"Comfort-Kit"},
-                              {"src":"https://i.ibb.co/7xv1c8Kw/tailbone-seat-cushion.jpg","text":"Comfort-Kit"},
-                              {"src":"https://i.ibb.co/hjp3k3J/tailbone-seat-cushion.jpg","text":"Comfort-Kit"}
+                              {"src":"https://i.ibb.co/BVY2T8sR/seat.jpg","text":"Comfort Kit"},
+                              {"src":"https://i.ibb.co/8gCjjmtS/pilllow.jpg","text":"Comfort Kit"},
+                              {"src":"https://i.ibb.co/h0DG9Yn/neck.jpg","text":"Comfort Kit"}
                             ]'
                 onclick="openPopup(this)">
-                <img src="https://i.ibb.co/Gfd4TJSc/neck-pillow-2.jpg">
+                <img src="https://i.ibb.co/BVY2T8sR/seat.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
                 Comfort-Kit
                 </div>
@@ -277,11 +324,33 @@ body{
                 </div>
               </div>
 
+              
+
+              <div class="product-card"
+                data-items='[
+                              {"src":"https://i.ibb.co/CprdVvNx/banner-images-cubic-interior-2-jpg.jpg","text":"Hydrographics"},
+                              {"src":"https://i.ibb.co/0WDfPFw/6.jpg","text":"Hydrographics"},
+                              {"src":"https://i.ibb.co/q30Z0gLZ/5.jpg","text":"Hydrographics"},
+                              {"src":"https://i.ibb.co/pBKmFdMq/4.jpg","text":"Hydrographics"},
+                              {"src":"https://i.ibb.co/1HDKZqD/3.jpg","text":"Hydrographics"},
+                              {"src":"https://i.ibb.co/PX6HmbV/2.jpg","text":"Hydrographics"},
+                              {"src":"https://i.ibb.co/wHWgD8n/1.jpg","text":"Hydrographics"}
+                            ]'
+                onclick="openPopup(this)">
+                <img src="https://i.ibb.co/wHWgD8n/1.jpg">
+                <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
+                Hydrographics
+                </div>
+              </div>
+
+              
+
               <div class="product-card"
                 data-items='[
                               {"src":"https://i.ibb.co/C3fDyF5K/boot-organiser.jpg","text":"Utility-Product"},
                               {"src":"https://i.ibb.co/609Pm8X0/shoe-organiser.jpg","text":"Utility-Product"},
                               {"src":"https://i.ibb.co/sdNgb2Xs/tyre-inflator-charger.png","text":"Utility-Product"},
+                              {"src":"https://i.ibb.co/4R4Skc6y/UTILITY-PRODUCTS.jpg","text":"Utility-Product"},
                               {"src":"https://i.ibb.co/7dJkNt2T/tyre-inflator-vacuum-cleaner.png","text":"Utility-Product"}
                             ]'
                 onclick="openPopup(this)">
@@ -290,6 +359,29 @@ body{
                 Utility-Product
                 </div>
               </div>
+
+             <div class="product-card"
+data-items='[
+{
+"src":"https://video.wixstatic.com/video/e187f6_f1982cee00d04ee494ccdd9c3bf1c7bb/1080p/mp4/file.mp4",
+"text":"Interior Demo",
+"type":"video"
+}
+]'
+onclick="openPopup(this)">
+
+                 <video muted autoplay loop playsinline>
+                   <source src="https://video.wixstatic.com/video/e187f6_f1982cee00d04ee494ccdd9c3bf1c7bb/1080p/mp4/file.mp4" type="video/mp4">
+                  </video>
+
+                  <div class="product-title"
+                    style="color:#ccc;display:inline-block;background:rgba(0,0,0,0.7);padding:5px 10px;border-radius:6px;font-size:14px;">
+                    Surface Illumination
+                          </div>
+
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -342,6 +434,12 @@ body{
   text-align: left;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+.product-card video{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:20px;
 }
 
 @media (max-width: 576px) {
@@ -398,19 +496,16 @@ body{
 }
 
 
-
-  .image-popup{
+.image-popup{
   position:fixed;
   inset:0;
   background:rgba(0,0,0,0.9);
   display:flex;
   align-items:center;
   justify-content:center;
-  opacity:0;
-  visibility:hidden;
-  transition:0.3s ease;
-  z-index:9999;
 }
+
+
 
 /* Hide non-active slides completely */
 #popupCarousel .carousel-item {
@@ -431,8 +526,9 @@ body{
 }
 
 #popupCarousel{
-  width:80%;
-  max-width:1100px;
+  width:auto;
+  max-width:90vw;
+  display:inline-block;
 }
 /* Center carousel item content */
 
@@ -444,6 +540,25 @@ body{
   border-radius: 12px;
 }
 
+#popupCarousel video{
+  max-width:60%;
+  max-height:60%;
+  border-radius:12px;
+  object-fit:contain;
+}
+#popupCarousel .carousel-inner{
+  width:auto;
+}
+
+#popupCarousel .carousel-item{
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+
+#popupCarousel .carousel-item.active{
+  display:flex;
+}
 
 .close-btn{
   position:absolute;
@@ -472,39 +587,57 @@ let popupItems = [];
 
 function openPopup(card){
 
-  popupItems = JSON.parse(card.dataset.items);
+popupItems = JSON.parse(card.dataset.items);
 
-  const popupInner = document.getElementById("popupCarouselInner");
-  popupInner.innerHTML = "";
+const popupInner = document.getElementById("popupCarouselInner");
+popupInner.innerHTML = "";
 
-  popupItems.forEach((item, index) => {
-    const slide = document.createElement("div");
-    slide.className = "carousel-item" + (index === 0 ? " active" : "");
+popupItems.forEach((item, index) => {
 
-    const img = document.createElement("img");
-    img.src = item.src;
+const slide = document.createElement("div");
+slide.className = "carousel-item" + (index === 0 ? " active" : "");
 
-    slide.appendChild(img);
-    popupInner.appendChild(slide);
-  });
+if(item.type === "video"){
 
-  document.getElementById("popupCaption").textContent = popupItems[0].text;
+const video = document.createElement("video");
+video.src = item.src;
+video.controls = true;
+video.autoplay = true;
+video.loop = true;
 
-  document.getElementById("imagePopup").classList.add("show");
+slide.appendChild(video);
 
-  popupCarousel = new bootstrap.Carousel(
-    document.getElementById("popupCarousel"),
-    { interval: false }
-  );
+}else{
 
-  // Update caption on slide change
-  document.getElementById("popupCarousel")
-    .addEventListener("slid.bs.carousel", function (e) {
-      document.getElementById("popupCaption").textContent =
-        popupItems[e.to].text;
-    });
+const img = document.createElement("img");
+img.src = item.src;
+
+slide.appendChild(img);
+
 }
 
+popupInner.appendChild(slide);
+
+});
+
+document.getElementById("popupCaption").textContent = popupItems[0].text;
+
+document.getElementById("imagePopup").classList.add("show");
+
+popupCarousel = new bootstrap.Carousel(
+document.getElementById("popupCarousel"),
+{ interval:false }
+);
+
+document.getElementById("popupCarousel")
+.addEventListener("slid.bs.carousel", function (e) {
+
+document.getElementById("popupCaption").textContent =
+popupItems[e.to].text;
+
+});
+
+}
 function closePopup(){
   document.getElementById("imagePopup").classList.remove("show");
 }
