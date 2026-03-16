@@ -36,7 +36,9 @@ body{
   width: 100%;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  padding: clamp(40px, 6vw, 80px);
+ /* FIXED PADDING */
+  padding: 40px clamp(40px, 6vw, 80px);
+
 
   background-image:
     linear-gradient(
@@ -152,6 +154,13 @@ body{
   border-radius:12px;
   box-shadow:0 20px 50px rgba(0,0,0,0.8);
 }
+.image-popup video{
+  max-width:60%;
+  max-height:60%;
+  border-radius:12px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.8);
+}
+
 
 .close-btn{
   position:absolute;
@@ -209,16 +218,59 @@ body{
   line-height: 1.7;
   hyphens: auto;
 }
+
+/* ================= BACK BUTTON ================= */
+.hero{
+  position: relative;   /* REQUIRED */
+}
+
+.back-btn{
+  position: absolute;
+  top: 30px;
+  right: 40px;
+
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #fff;
+  text-decoration: none;
+
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(0,0,0,0.4);
+
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.back-btn:hover{
+  background: #f1c40f;
+  color: #000;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px){
+  .back-btn{
+    top: 20px;
+    right: 20px;
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <section class="hero">
-
+<!-- BACK BUTTON -->
+<a href="index.html#product" class="back-btn">
+  <-Back
+</a>
   <!-- LEFT -->
   <div class="hero-content">
-
+    
     <div class="accent"></div>
     <h1>EXTERIOR PRODUCTS</h1>
     <h2>Enhancing Visibility, Style & Brand Identity</h2>
@@ -238,20 +290,21 @@ body{
             <div class="card-grid">
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/7dfvqvsz/BCP-1.jpg","text":"Body Cladding Panel"}
+                              {"src":"https://i.ibb.co/7dfvqvsz/BCP-1.jpg","text":"Bumper Coner Protector"},
+                              {"src":"https://i.ibb.co/PzJqMSRL/BCP-2.jpg","text":"Bumper Coner Protector"}
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/7dfvqvsz/BCP-1.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
-                Body Cladding Panel
+                Bumper Coner Protector
                 </div>
               </div>
 
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/7tqd9gWD/1.jpg","text":"Bonnet scoop-1"},
-                              {"src":"https://i.ibb.co/xSmKY7nj/2.jpg","text":"Bonnet scoop-2"},
-                              {"src":"https://i.ibb.co/TD9qLCy7/3.jpg","text":"Bonnet scoop-3"}
+                              {"src":"https://i.ibb.co/7tqd9gWD/1.jpg","text":"Bonnet scoop"},
+                              {"src":"https://i.ibb.co/xSmKY7nj/2.jpg","text":"Bonnet scoop"},
+                              {"src":"https://i.ibb.co/TD9qLCy7/3.jpg","text":"Bonnet scoop"}
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/7tqd9gWD/1.jpg">
@@ -262,11 +315,11 @@ body{
               
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/rGVGHmbF/BSM-1.jpg","text":"BSM-1"},
-                              {"src":"https://i.ibb.co/6V4gQ8z/BSM-2.jpg","text":"BSM-2"},
-                              {"src": "https://i.ibb.co/zW2Mjv6s/BSM-3.jpg","text":"BSM-3"},
-                              {"src":  "https://i.ibb.co/bRGzZ3jj/BSM4.jpg","text":"BSM-4"},
-                              {"src": "https://i.ibb.co/KjC0c48B/BSM5.jpg","text":"BSM-5"}
+                              {"src":"https://i.ibb.co/rGVGHmbF/BSM-1.jpg","text":"BSM"},
+                              
+                              {"src": "https://i.ibb.co/zW2Mjv6s/BSM-3.jpg","text":"BSM"}
+                              
+                              
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/rGVGHmbF/BSM-1.jpg">
@@ -283,15 +336,18 @@ body{
                                                                                                                       
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/SX1pYj5q/1.jpg","text":"Decal-1"},
-                              {"src":"https://i.ibb.co/wFXF46rz/2-a.jpg","text":"Decal-2"},
-                              {"src": "https://i.ibb.co/0VvyYZF6/2a.jpg","text":"Decal-3"},
-                              {"src":  "https://i.ibb.co/vCK0T1Ff/5.jpg","text":"Decal-4"},
-                              {"src": "https://i.ibb.co/B50tq79f/banner-10.jpg","text":"Decal-5"},
-                              {"src": "https://i.ibb.co/BVxfM32T/d1.jpg","text":"Decal-6"}
+                              
+
+                              {"src": "https://i.ibb.co/0VvyYZF6/2a.jpg","text":"Decal"},
+                              
+                              {"src":  "https://i.ibb.co/xKfy2Wys/SHARK-DECAL.jpg","text":"Decal"},
+                              {"src":  "https://i.ibb.co/vv3MT3nk/adventure-decal.jpg","text":"Decal"},
+                              {"src":  "https://i.ibb.co/nML6tJxn/LC-DECAL.jpg","text":"Decal"},
+                              
+                              {"src": "https://i.ibb.co/BVxfM32T/d1.jpg","text":"Decal"}
                             ]'
                 onclick="openPopup(this)">
-                <img src="https://i.ibb.co/SX1pYj5q/1.jpg">
+                <img src="https://i.ibb.co/BVxfM32T/d1.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
                 Decal
                 </div>
@@ -299,11 +355,12 @@ body{
 
              <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/jxxRT2H/1.jpg","text":"Door Guard-1"},
-                              {"src":"https://i.ibb.co/bttRTss/2.jpg","text":"Door Guard-2"},
-                              {"src": "https://i.ibb.co/JjsZ3Xzs/3.jpg","text":"Door Guard-3"},
-                              {"src":  "https://i.ibb.co/N6Qzhk4F/6.jpg","text":"Door Guard-4"},
-                              {"src": "https://i.ibb.co/G456kSqG/7.jpg","text":"Door Guard-5"}
+                              {"src":"https://i.ibb.co/jxxRT2H/1.jpg","text":"Door Guard"},
+                              {"src":"https://i.ibb.co/bttRTss/2.jpg","text":"Door Guard"},
+                              {"src": "https://i.ibb.co/JjsZ3Xzs/3.jpg","text":"Door Guard"},
+                              {"src":  "https://i.ibb.co/N6Qzhk4F/6.jpg","text":"Door Guard"},
+                              {"src": "https://i.ibb.co/G456kSqG/7.jpg","text":"Door Guard"},
+                              {"src": "https://i.ibb.co/9Hg9k8Fj/DG.jpg","text":"Door Guard"}
                             
                             ]'
                 onclick="openPopup(this)">
@@ -315,16 +372,17 @@ body{
 
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/LD325xPL/EMBLEM-1.jpg","text":"Emblem-1"},
-                              {"src":"https://i.ibb.co/S4WggPC6/EMBLEM-2.jpg","text":"Emblem-2"},
-                              {"src": "https://i.ibb.co/XfW48vr8/EMBLEM-3.jpg","text":"Emblem-3"},
-                              {"src": "https://i.ibb.co/23FYBVxP/EMBLEM-5.jpg","text":"Emblem-4"},
-                              {"src":"https://i.ibb.co/YFKsZ3VT/EMBLEM-6.jpg","text":"Emblem-5"},
-                              {"src":"https://i.ibb.co/S7yRJGn3/EMBLEM-7.jpg","text":"Emblem-6"},
-                              {"src":"https://i.ibb.co/bgVByvGs/EMBLEM-8.jpg","text":"Emblem-7"},
-                              {"src":"https://i.ibb.co/zTFMG0dQ/EMBLEM-9.jpg","text":"Emblem-8"},
-                              {"src":"https://i.ibb.co/jPfktjfL/EMBLEM-10.jpg","text":"Emblem-9"},
-                              {"src":"https://i.ibb.co/jkfKtHR9/hev-790-tt.jpg","text":"Emblem-10"}
+                             
+                              {"src":"https://i.ibb.co/S4WggPC6/EMBLEM-2.jpg","text":"Emblem"},
+                              {"src": "https://i.ibb.co/XfW48vr8/EMBLEM-3.jpg","text":"Emblem"},
+                              {"src": "https://i.ibb.co/23FYBVxP/EMBLEM-5.jpg","text":"Emblem"},
+                              {"src":"https://i.ibb.co/YFKsZ3VT/EMBLEM-6.jpg","text":"Emblem"},
+                              {"src":"https://i.ibb.co/S7yRJGn3/EMBLEM-7.jpg","text":"Emblem"},
+                              {"src":"https://i.ibb.co/LD325xPL/EMBLEM-1.jpg","text":"Emblem"},
+                              {"src":"https://i.ibb.co/zTFMG0dQ/EMBLEM-9.jpg","text":"Emblem"},
+                              {"src":"https://i.ibb.co/jPfktjfL/EMBLEM-10.jpg","text":"Emblem"},
+                                {"src":"https://i.ibb.co/LDq08qZX/shark-badge.jpg","text":"Emblem"},
+                              {"src":"https://i.ibb.co/jkfKtHR9/hev-790-tt.jpg","text":"Emblem"}
                             
                             ]'
                 onclick="openPopup(this)">
@@ -346,8 +404,8 @@ body{
             <div class="card-grid">
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/Z1B4NBJm/fender-1.jpg","text":"Fender-1"},
-                              {"src":"https://i.ibb.co/KjS8hwh9/fender-2.jpg","text":"Fender-2"}
+                              {"src":"https://i.ibb.co/Z1B4NBJm/fender-1.jpg","text":"Fender"},
+                              {"src":"https://i.ibb.co/KjS8hwh9/fender-2.jpg","text":"Fender"}
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/Z1B4NBJm/fender-1.jpg">
@@ -358,7 +416,9 @@ body{
               
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/ycnxT3VP/FUEL-LID.jpg","text":"Fuel-Lid"}
+                              {"src":"https://i.ibb.co/ycnxT3VP/FUEL-LID.jpg","text":"Fuel-Lid"},
+                              {"src":"https://i.ibb.co/hJMn0VKn/fuel-3.jpg","text":"Fuel-Lid"},
+                              {"src":"https://i.ibb.co/JjfSRr6V/fuel-2.jpg","text":"Fuel-Lid"}
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/ycnxT3VP/FUEL-LID.jpg">
@@ -370,11 +430,11 @@ body{
                <div class="product-card"
                 data-items='[
                               {"src":"https://i.ibb.co/rGwnVn3G/head-lamp-1.jpg","text":"HeadLamp"},
-                              {"src":"https://i.ibb.co/fZkVNZ1/hilux-taillamp.jpg","text":"TailLamp-1"},
-                              {"src": "https://i.ibb.co/hFtYggJb/tail-lamp-garnis-2.jpg","text":"TailLamp-2"},
-                              {"src":  "https://i.ibb.co/SqfckkS/tail-lamp-garnish.jpg","text":"TailLamp-3"},
-                              {"src": "https://i.ibb.co/tP1z9nZc/tail-lamp1.jpg","text":"TailLamp-4"},
-                              {"src": "https://i.ibb.co/1G1WxqVX/tail-lamp2.jpg","text":"TailLamp-5"}
+                              
+                              {"src": "https://i.ibb.co/hFtYggJb/tail-lamp-garnis-2.jpg","text":"TailLamp"},
+                              {"src":  "https://i.ibb.co/SqfckkS/tail-lamp-garnish.jpg","text":"TailLamp"},
+                              {"src": "https://i.ibb.co/tP1z9nZc/tail-lamp1.jpg","text":"TailLamp"},
+                              {"src": "https://i.ibb.co/1G1WxqVX/tail-lamp2.jpg","text":"TailLamp"}
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/rGwnVn3G/head-lamp-1.jpg">
@@ -385,9 +445,9 @@ body{
 
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/kVvJmV7M/ORVM1.jpg","text":"ORVM-1"},
-                              {"src":"https://i.ibb.co/rK0pt5cR/ORVM2.jpg","text":"ORVM-2"},          
-                              {"src":"https://i.ibb.co/hJpCC7k4/ORVM3.jpg","text":"ORVM-3"}
+                              {"src":"https://i.ibb.co/kVvJmV7M/ORVM1.jpg","text":"ORVM"},
+                              {"src":"https://i.ibb.co/rK0pt5cR/ORVM2.jpg","text":"ORVM"},          
+                              {"src":"https://i.ibb.co/hJpCC7k4/ORVM3.jpg","text":"ORVM"}
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/kVvJmV7M/ORVM1.jpg">
@@ -414,7 +474,7 @@ body{
               <div class="product-card"
                 data-items='[
                               {"src":"https://i.ibb.co/BHmqWkDF/4.jpg","text":"Side-Scoop"},
-                              {"src":"https://i.ibb.co/Y4mRskfZ/5.jpg","text":"Side-Scoop"},          
+                             
                               {"src":"https://i.ibb.co/YFNW7YbV/6.jpg","text":"Side-Scoop"},
                               {"src":"https://i.ibb.co/LD74vdTx/side-scoop-1.jpg","text":"Side-Scoop"},
                               {"src":"https://i.ibb.co/qFLGkYW5/side-scoop-3.jpg","text":"Side-Scoop"}
@@ -457,6 +517,22 @@ body{
                 Two-Wheeler
                 </div>
               </div> 
+
+              <div class="product-card"
+                data-items='[
+                              {"src":"https://i.ibb.co/3YcSZ7Gz/EXTERIOR-HYDRO-4.jpg","text":"Hydrographics"},         
+                              {"src":"https://i.ibb.co/nynw14H/EXTERIOR-HYDRO-3.jpg","text":"Hydrographics"},
+                              {"src":"https://i.ibb.co/CpXN0DrW/EXTERIOR-HYDRO-2.jpg","text":"Hydrographics"},
+                              {"src":"https://i.ibb.co/60mfHsDT/EXTERIOR-HYDRO-1.jpg","text":"Hydrographics"}
+                            ]'
+                onclick="openPopup(this)">
+                <img src="https://i.ibb.co/60mfHsDT/EXTERIOR-HYDRO-1.jpg">
+                <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
+                Hydrographics
+                </div>
+              </div> 
+
+              
 
             </div>
           </div>
@@ -680,10 +756,24 @@ function openPopup(card){
     const slide = document.createElement("div");
     slide.className = "carousel-item" + (index === 0 ? " active" : "");
 
-    const img = document.createElement("img");
-    img.src = item.src;
+    if(item.type === "video"){
 
-    slide.appendChild(img);
+  const video = document.createElement("video");
+  video.src = item.src;
+  video.controls = true;
+  video.autoplay = true;
+  video.loop = true;
+
+  slide.appendChild(video);
+
+}else{
+
+  const img = document.createElement("img");
+  img.src = item.src;
+
+  slide.appendChild(img);
+
+}
     popupInner.appendChild(slide);
   });
 
