@@ -36,7 +36,7 @@ body{
   width: 100%;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  padding: clamp(40px, 6vw, 80px);
+padding: 40px clamp(40px, 6vw, 80px);
 
   background-image:
     linear-gradient(
@@ -208,13 +208,56 @@ body{
   hyphens: auto;
 }
 
+/* ================= BACK BUTTON ================= */
+.hero{
+  position: relative;   /* REQUIRED */
+}
+
+.back-btn{
+  position: absolute;
+  top: 30px;
+  right: 40px;
+
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #fff;
+  text-decoration: none;
+
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(0,0,0,0.4);
+
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.back-btn:hover{
+  background: #f1c40f;
+  color: #000;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px){
+  .back-btn{
+    top: 20px;
+    right: 20px;
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
 <section class="hero">
-
+  <!-- BACK BUTTON -->
+<a href="index.html#product" class="back-btn">
+  <-Back
+</a>
   <!-- LEFT -->
   <div class="hero-content">
 
@@ -242,6 +285,9 @@ body{
               </div>
               <div class="product-card" onclick="openPopup(this)">
                 <img src="https://i.ibb.co/4Z3twmhq/Mug-copy.jpg">
+              </div>
+              <div class="product-card" onclick="openPopup(this)">
+                <img src="https://i.ibb.co/SX6j9mrb/sustainable.jpg">
               </div>
               <div class="product-card" onclick="openPopup(this)">
                 <img src="https://i.ibb.co/HLR7vv9W/mugg.jpg">
