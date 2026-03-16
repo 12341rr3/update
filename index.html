@@ -575,23 +575,28 @@ background-color: #f1c40f;
 
 #carouselExampleControls{
   width:100%;
-  height:100vh;   /* full screen height */
+  margin:0;
   padding:0;
-  margin-top: 0%;
 }
 
+/* keep carousel responsive */
 #carouselExampleControls .carousel-inner{
-  height:100%;
+  width:100%;
 }
 
-#carouselExampleControls .carousel-item{
-  height:100%;
-}
-
+/* image responsive */
 #carouselExampleControls .carousel-item img{
   width:100%;
-  height:100%;
-  object-fit:cover;   /* fills entire screen */
+  height:auto;        /* keeps ratio */
+  max-height:100vh;   /* prevents oversized image */
+  object-fit:cover;
+}
+
+@media (max-width:768px){
+  #carouselExampleControls .carousel-item img{
+    max-height:60vh;
+    object-fit:cover;
+  }
 }
 </style>
 <!-- 🔥 CONTENT BELOW -->
