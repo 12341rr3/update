@@ -69,7 +69,7 @@ body{
 .hero p{
   font-size:13.5px;
   line-height:1.65;
-  max-width:540px;
+  max-width:100%;
   color:#ddd;
 }
 
@@ -212,11 +212,14 @@ body{
   }
 }
 .balanced-text{
-  text-align: justify;
-  text-justify: inter-word;
-  max-width: 720px;        /* keeps clean reading width */
-  line-height: 1.7;
-  hyphens: auto;
+  text-align: justify;          /* looks cleaner than justify */
+  max-width: 750px;
+  line-height: 1.75;
+  color: #ddd;
+
+  word-break: keep-all;
+  overflow-wrap: break-word; /* only break if absolutely needed */
+  hyphens: none;
 }
 
 /* ================= BACK BUTTON ================= */
@@ -276,8 +279,9 @@ body{
     <h2>Enhancing Visibility, Style & Brand Identity</h2>
 
     <p class="balanced-text">
-      Our exterior kits are engineered to enhance both performance and presence. Each component—from claddings to guards to styling elements—is designed for OEM-grade fitment, weather endurance, and long-term durability. With precision tooling and high-impact materials, our exterior accessories elevate the vehicle’s road appeal while offering real-world protection and reliability.
-    </p>
+      Our exterior kits are meticulously engineered to enhance both performance and styling. Every component—ranging from claddings and guards to premium styling elements—is designed for OEM-grade fitment, superior weather resistance, and long-term durability. Leveraging precision tooling and high-impact materials, our exterior accessories not only elevate the vehicle’s presence on road but also deliver enhanced protection and reliability.
+
+  </p>
 
     <!-- CAROUSEL -->
     <div id="cardCarousel" class="carousel slide" data-bs-ride="false">
@@ -290,13 +294,13 @@ body{
             <div class="card-grid">
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/7dfvqvsz/BCP-1.jpg","text":"Bumper Coner Protector"},
-                              {"src":"https://i.ibb.co/PzJqMSRL/BCP-2.jpg","text":"Bumper Coner Protector"}
+                              {"src":"https://i.ibb.co/7dfvqvsz/BCP-1.jpg","text":"Bumper Corner Protector"},
+                              {"src":"https://i.ibb.co/PzJqMSRL/BCP-2.jpg","text":"Bumper Corner Protector"}
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/7dfvqvsz/BCP-1.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
-                Bumper Coner Protector
+                Bumper Corner Protector
                 </div>
               </div>
 
@@ -315,9 +319,9 @@ body{
               
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/rGVGHmbF/BSM-1.jpg","text":"BSM"},
+                              {"src":"https://i.ibb.co/rGVGHmbF/BSM-1.jpg","text":"Body Side Molding"},
                               
-                              {"src": "https://i.ibb.co/zW2Mjv6s/BSM-3.jpg","text":"BSM"}
+                              {"src": "https://i.ibb.co/zW2Mjv6s/BSM-3.jpg","text":"Body Side Molding"}
                               
                               
                             ]'
@@ -329,7 +333,7 @@ body{
   padding: 5px 10px;
   border-radius: 6px;
   font-size: 14px;">
-                BSM
+               Body Side Molding
                 </div>
               </div>    
               
@@ -343,11 +347,11 @@ body{
                               {"src":  "https://i.ibb.co/xKfy2Wys/SHARK-DECAL.jpg","text":"Decal"},
                               {"src":  "https://i.ibb.co/vv3MT3nk/adventure-decal.jpg","text":"Decal"},
                               {"src":  "https://i.ibb.co/nML6tJxn/LC-DECAL.jpg","text":"Decal"},
-                              
+                              {"src":"https://i.ibb.co/GQqMYgfJ/DECALE-2.jpg","text":"Decal"},
                               {"src": "https://i.ibb.co/BVxfM32T/d1.jpg","text":"Decal"}
                             ]'
                 onclick="openPopup(this)">
-                <img src="https://i.ibb.co/BVxfM32T/d1.jpg">
+                <img src="https://i.ibb.co/0VvyYZF6/2a.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
                 Decal
                 </div>
@@ -360,7 +364,7 @@ body{
                               {"src": "https://i.ibb.co/JjsZ3Xzs/3.jpg","text":"Door Guard"},
                               {"src":  "https://i.ibb.co/N6Qzhk4F/6.jpg","text":"Door Guard"},
                               {"src": "https://i.ibb.co/G456kSqG/7.jpg","text":"Door Guard"},
-                              {"src": "https://i.ibb.co/9Hg9k8Fj/DG.jpg","text":"Door Guard"}
+                              {"src": "https://i.ibb.co/ZzSBWzsb/DG2.jpg","text":"Door Guard"}
                             
                             ]'
                 onclick="openPopup(this)">
@@ -373,10 +377,10 @@ body{
               <div class="product-card"
                 data-items='[
                              
-                              {"src":"https://i.ibb.co/S4WggPC6/EMBLEM-2.jpg","text":"Emblem"},
+                              {"src":"https://i.ibb.co/YFKsZ3VT/EMBLEM-6.jpg","text":"Emblem"},
                               {"src": "https://i.ibb.co/XfW48vr8/EMBLEM-3.jpg","text":"Emblem"},
                               {"src": "https://i.ibb.co/23FYBVxP/EMBLEM-5.jpg","text":"Emblem"},
-                              {"src":"https://i.ibb.co/YFKsZ3VT/EMBLEM-6.jpg","text":"Emblem"},
+                              {"src":"https://i.ibb.co/3y40jkc1/EMBLEM-2a.jpg","text":"Emblem"},
                               {"src":"https://i.ibb.co/S7yRJGn3/EMBLEM-7.jpg","text":"Emblem"},
                               {"src":"https://i.ibb.co/LD325xPL/EMBLEM-1.jpg","text":"Emblem"},
                               {"src":"https://i.ibb.co/zTFMG0dQ/EMBLEM-9.jpg","text":"Emblem"},
@@ -386,7 +390,7 @@ body{
                             
                             ]'
                 onclick="openPopup(this)">
-                <img src="https://i.ibb.co/LD325xPL/EMBLEM-1.jpg">
+                <img src="https://i.ibb.co/YFKsZ3VT/EMBLEM-6.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
                 Emblem
                 </div>
@@ -404,55 +408,55 @@ body{
             <div class="card-grid">
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/Z1B4NBJm/fender-1.jpg","text":"Fender"},
-                              {"src":"https://i.ibb.co/KjS8hwh9/fender-2.jpg","text":"Fender"}
+                              {"src":"https://i.ibb.co/Z1B4NBJm/fender-1.jpg","text":"Fender Garnish"},
+                              {"src":"https://i.ibb.co/KjS8hwh9/fender-2.jpg","text":"Fender Garnish"}
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/Z1B4NBJm/fender-1.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
-                Fender
+                Fender Garnish
                 </div>
               </div> 
               
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/ycnxT3VP/FUEL-LID.jpg","text":"Fuel-Lid"},
-                              {"src":"https://i.ibb.co/hJMn0VKn/fuel-3.jpg","text":"Fuel-Lid"},
-                              {"src":"https://i.ibb.co/JjfSRr6V/fuel-2.jpg","text":"Fuel-Lid"}
+                              {"src":"https://i.ibb.co/TBjzrQ2r/fuel-1.jpg","text":"Fuel-Lid Garnish"},
+                              {"src":"https://i.ibb.co/hJMn0VKn/fuel-3.jpg","text":"Fuel-Lid Garnish"},
+                              {"src":"https://i.ibb.co/JjfSRr6V/fuel-2.jpg","text":"Fuel-Lid Garnish"}
                             ]'
                 onclick="openPopup(this)">
-                <img src="https://i.ibb.co/ycnxT3VP/FUEL-LID.jpg">
+                <img src="https://i.ibb.co/TBjzrQ2r/fuel-1.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
-                Fuel-Lid
+                Fuel-Lid Garnish
                 </div>
               </div> 
 
                <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/rGwnVn3G/head-lamp-1.jpg","text":"HeadLamp"},
+                              {"src":"https://i.ibb.co/rGwnVn3G/head-lamp-1.jpg","text":"HeadLamp Garnish"},
                               
-                              {"src": "https://i.ibb.co/hFtYggJb/tail-lamp-garnis-2.jpg","text":"TailLamp"},
-                              {"src":  "https://i.ibb.co/SqfckkS/tail-lamp-garnish.jpg","text":"TailLamp"},
-                              {"src": "https://i.ibb.co/tP1z9nZc/tail-lamp1.jpg","text":"TailLamp"},
-                              {"src": "https://i.ibb.co/1G1WxqVX/tail-lamp2.jpg","text":"TailLamp"}
+                              {"src": "https://i.ibb.co/hFtYggJb/tail-lamp-garnis-2.jpg","text":"TailLamp Garnish"},
+                              {"src":  "https://i.ibb.co/SqfckkS/tail-lamp-garnish.jpg","text":"TailLamp Garnish"},
+                              {"src": "https://i.ibb.co/tP1z9nZc/tail-lamp1.jpg","text":"TailLamp Garnish"},
+                              {"src": "https://i.ibb.co/1G1WxqVX/tail-lamp2.jpg","text":"TailLamp Garnish"}
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/rGwnVn3G/head-lamp-1.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
-                HeadLamp/TailLamp
+                HeadLamp/TailLamp Garnish
                 </div>
               </div> 
 
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/kVvJmV7M/ORVM1.jpg","text":"ORVM"},
-                              {"src":"https://i.ibb.co/rK0pt5cR/ORVM2.jpg","text":"ORVM"},          
-                              {"src":"https://i.ibb.co/hJpCC7k4/ORVM3.jpg","text":"ORVM"}
+                              {"src":"https://i.ibb.co/kVvJmV7M/ORVM1.jpg","text":"ORVM Garnish"},
+                              {"src":"https://i.ibb.co/rK0pt5cR/ORVM2.jpg","text":"ORVM Garnish"},          
+                              {"src":"https://i.ibb.co/hJpCC7k4/ORVM3.jpg","text":"ORVM Garnish"}
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/kVvJmV7M/ORVM1.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
-                ORVM
+                ORVM Garnish
                 </div>
               </div> 
 
@@ -508,25 +512,29 @@ body{
               </div> 
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/BVxfM32T/d1.jpg","text":"Two-Wheeler"},         
-                              {"src":"https://i.ibb.co/GQqMYgfJ/DECALE-2.jpg","text":"Two-Wheeler"}
+                              {"src":"https://i.ibb.co/C3n1CSnG/tyre-inflator.jpg","text":"Tyre-Inflator"},
+                              {"src":"https://i.ibb.co/wZpwLZGQ/tyre-pressure-monitoring-system.jpg","text":"Tyre-Pressure-Monitoring-System"},
+                              {"src":"https://i.ibb.co/XrTrp49R/puncture-kit-2.jpg","text":"Punchure-Kit"},
+                              {"src":"https://i.ibb.co/k2dcvPhG/tool-kit-with-jack-4.jpg","text":"Tool-Kit With Jack"}
+                              
                             ]'
                 onclick="openPopup(this)">
-                <img src="https://i.ibb.co/BVxfM32T/d1.jpg">
+                <img src="https://i.ibb.co/C3n1CSnG/tyre-inflator.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
-                Two-Wheeler
+                Utility Kit
                 </div>
               </div> 
 
               <div class="product-card"
                 data-items='[
+                              {"src":"https://i.ibb.co/pr14j4Dq/EXTERIOR-HYDRO-1-1.jpg","text":"Hydrographics"},
                               {"src":"https://i.ibb.co/3YcSZ7Gz/EXTERIOR-HYDRO-4.jpg","text":"Hydrographics"},         
                               {"src":"https://i.ibb.co/nynw14H/EXTERIOR-HYDRO-3.jpg","text":"Hydrographics"},
-                              {"src":"https://i.ibb.co/CpXN0DrW/EXTERIOR-HYDRO-2.jpg","text":"Hydrographics"},
-                              {"src":"https://i.ibb.co/60mfHsDT/EXTERIOR-HYDRO-1.jpg","text":"Hydrographics"}
+                              {"src":"https://i.ibb.co/CpXN0DrW/EXTERIOR-HYDRO-2.jpg","text":"Hydrographics"}
+                              
                             ]'
                 onclick="openPopup(this)">
-                <img src="https://i.ibb.co/60mfHsDT/EXTERIOR-HYDRO-1.jpg">
+                <img src="https://i.ibb.co/pr14j4Dq/EXTERIOR-HYDRO-1-1.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
                 Hydrographics
                 </div>
@@ -757,28 +765,22 @@ function openPopup(card){
     slide.className = "carousel-item" + (index === 0 ? " active" : "");
 
     if(item.type === "video"){
+      const video = document.createElement("video");
+      video.src = item.src;
+      video.controls = true;
+      video.autoplay = true;
+      video.loop = true;
+      slide.appendChild(video);
+    } else {
+      const img = document.createElement("img");
+      img.src = item.src;
+      slide.appendChild(img);
+    }
 
-  const video = document.createElement("video");
-  video.src = item.src;
-  video.controls = true;
-  video.autoplay = true;
-  video.loop = true;
-
-  slide.appendChild(video);
-
-}else{
-
-  const img = document.createElement("img");
-  img.src = item.src;
-
-  slide.appendChild(img);
-
-}
     popupInner.appendChild(slide);
   });
 
   document.getElementById("popupCaption").textContent = popupItems[0].text;
-
   document.getElementById("imagePopup").classList.add("show");
 
   popupCarousel = new bootstrap.Carousel(
@@ -786,19 +788,70 @@ function openPopup(card){
     { interval: false }
   );
 
-  // Update caption on slide change
-  document.getElementById("popupCarousel")
-    .addEventListener("slid.bs.carousel", function (e) {
-      document.getElementById("popupCaption").textContent =
-        popupItems[e.to].text;
-    });
-}
+  const popup = document.getElementById("popupCarousel");
+  const prevBtn = popup.querySelector(".carousel-control-prev");
+  const nextBtn = popup.querySelector(".carousel-control-next");
 
+  function updatePopupArrows() {
+    const items = popup.querySelectorAll(".carousel-item");
+    const active = popup.querySelector(".carousel-item.active");
+
+    const index = [...items].indexOf(active);
+
+    // Hide prev on first
+    prevBtn.style.display = (index === 0) ? "none" : "block";
+
+    // Hide next on last
+    nextBtn.style.display = (index === items.length - 1) ? "none" : "block";
+  }
+
+  // Run once
+  updatePopupArrows();
+
+  // Update on slide change
+  popup.addEventListener("slid.bs.carousel", function (e) {
+    document.getElementById("popupCaption").textContent =
+      popupItems[e.to].text;
+
+    updatePopupArrows();
+  });
+}
 function closePopup(){
   document.getElementById("imagePopup").classList.remove("show");
 }
 </script>
+<script>
+const carousel = document.getElementById('cardCarousel');
+const prevBtn = carousel.querySelector('.carousel-control-prev');
+const nextBtn = carousel.querySelector('.carousel-control-next');
 
+function updateArrows() {
+  const items = carousel.querySelectorAll('.carousel-item');
+  const active = carousel.querySelector('.carousel-item.active');
+
+  const index = [...items].indexOf(active);
+
+  // Hide prev if first slide
+  if (index === 0) {
+    prevBtn.style.display = "none";
+  } else {
+    prevBtn.style.display = "block";
+  }
+
+  // Hide next if last slide
+  if (index === items.length - 1) {
+    nextBtn.style.display = "none";
+  } else {
+    nextBtn.style.display = "block";
+  }
+}
+
+// Run on load
+updateArrows();
+
+// Run after slide change
+carousel.addEventListener('slid.bs.carousel', updateArrows);
+</script>
 
 </body>
 </html>
