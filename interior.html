@@ -35,7 +35,7 @@ body{
   min-height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr;
 padding: 40px clamp(40px, 6vw, 80px);
 
   background-image:
@@ -68,7 +68,7 @@ padding: 40px clamp(40px, 6vw, 80px);
 .hero p{
   font-size:13.5px;
   line-height:1.65;
-  max-width:540px;
+  max-width:100%;
   color:#ddd;
 }
 
@@ -209,11 +209,14 @@ padding: 40px clamp(40px, 6vw, 80px);
 }
 }
 .balanced-text{
-  text-align: justify;
-  text-justify: inter-word;
-  max-width: 720px;        /* keeps clean reading width */
-  line-height: 1.7;
-  hyphens: auto;
+  text-align: justify;          /* looks cleaner than justify */
+  max-width: 750px;
+  line-height: 1.75;
+  color: #ddd;
+
+  word-break: keep-all;
+  overflow-wrap: break-word; /* only break if absolutely needed */
+  hyphens: none;
 }
 
 /* ================= BACK BUTTON ================= */
@@ -275,36 +278,35 @@ padding: 40px clamp(40px, 6vw, 80px);
     <h2>Enhancing Visibility, Style & Brand Identity</h2>
 
     <p class="balanced-text">
-         Our interior kits combine ergonomic comfort with functional innovation. Built around user experience, every product seamlessly integrates with the cabin environment, offering better utility, cleaner aesthetics, and premium tactile feel. From organizers to comfort components, each product is validated for safety, durability, and everyday practicality, making every drive more refined.
- 
+         Transform your cabin into a space of comfort, sophistication, and intelligent design with our premium interior kits. Thoughtfully engineered around the driver and passengers, each component blends seamlessly into the vehicle’s interior, enhancing both functionality and aesthetics.
+From smart organizers to comfort-enhancing  elements, every product is crafted with high-quality materials and a refined tactile finish, delivering a truly elevated in-cabin experience. Designed for everyday convenience and rigorously validated for safety and durability, our interior solutions bring effortless utility and lasting elegance to every journey.
+Upgrade your drive with interiors that don’t just look premium—but feel exceptional, every time you step in.
+
       </p>
 
     <!-- CAROUSEL -->
-    <div id="cardCarousel" class="carousel slide" data-bs-ride="false">
-
-      <div class="carousel-inner">
-
-        <!-- SLIDE 1 -->
-        <div class="carousel-item active">
+    
           <div class="carousel-content">
             <div class="card-grid">
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/BVY2T8sR/seat.jpg","text":"Comfort Kit"},
-                              {"src":"https://i.ibb.co/8gCjjmtS/pilllow.jpg","text":"Comfort Kit"},
-                              {"src":"https://i.ibb.co/h0DG9Yn/neck.jpg","text":"Comfort Kit"}
+                              {"src":"https://i.ibb.co/KknJKz9/seat-1.jpg","text":"Tail Bone Cushion "},
+                              {"src":"https://i.ibb.co/7JxNHgLB/pilllow-1.jpg","text":"Car Cushion"},
+                              {"src":"https://i.ibb.co/ynK7Npt3/neck-1.jpg","text":"Neck Rest Cushion "},
+                              {"src":"https://i.ibb.co/F4vxkCKp/first-aid-kit.jpg","text":"Comfort & Utility "},
+                              {"src":"https://i.ibb.co/RTFKqf9C/safety-triangle.jpg","text":"Comfort & Utility "}
                             ]'
                 onclick="openPopup(this)">
-                <img src="https://i.ibb.co/BVY2T8sR/seat.jpg">
+                <img src="https://i.ibb.co/KknJKz9/seat-1.jpg">
                 <div class="product-title" style="color: #ccc;display: inline-block;background: rgba(0, 0, 0, 0.7);padding: 5px 10px;border-radius: 6px;font-size: 14px;">
-                Comfort-Kit
+                Comfort Kit 
                 </div>
               </div>
 
               <div class="product-card"
                 data-items='[
                               {"src":"https://i.ibb.co/C5nq53fp/floor-mat-3.jpg","text":"Floor-Mat"},
-                              {"src":"https://i.ibb.co/6JGwR570/rubber-floor-mat-2.jpg","text":"Floor-Mat"}
+                              {"src":"https://i.ibb.co/HDjQBtgQ/rubber-floor-mat-2a.jpg","text":"Floor-Mat"}
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/C5nq53fp/floor-mat-3.jpg">
@@ -315,7 +317,7 @@ padding: 40px clamp(40px, 6vw, 80px);
 
                <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/1GW88WYt/2.jpg","text":"Scuff-Plate"}
+                              {"src":"https://i.ibb.co/1GW88WYt/2.jpg","text":"Wireless Illuminated Scuff-Plate"}
                             ]'
                 onclick="openPopup(this)">
                 <img src="https://i.ibb.co/1GW88WYt/2.jpg">
@@ -347,9 +349,9 @@ padding: 40px clamp(40px, 6vw, 80px);
 
               <div class="product-card"
                 data-items='[
-                              {"src":"https://i.ibb.co/C3fDyF5K/boot-organiser.jpg","text":"Utility-Product"},
-                              {"src":"https://i.ibb.co/609Pm8X0/shoe-organiser.jpg","text":"Utility-Product"},
-                              {"src":"https://i.ibb.co/sdNgb2Xs/tyre-inflator-charger.png","text":"Utility-Product"},
+                              {"src":"https://i.ibb.co/C3fDyF5K/boot-organiser.jpg","text":"Multi-Purpose Organiser"},
+                              {"src":"https://i.ibb.co/609Pm8X0/shoe-organiser.jpg","text":"Shoe Organiser"},
+                              
                               {"src":"https://i.ibb.co/4R4Skc6y/UTILITY-PRODUCTS.jpg","text":"Utility-Product"},
                               {"src":"https://i.ibb.co/7dJkNt2T/tyre-inflator-vacuum-cleaner.png","text":"Utility-Product"}
                             ]'
@@ -364,7 +366,12 @@ padding: 40px clamp(40px, 6vw, 80px);
 data-items='[
 {
 "src":"https://video.wixstatic.com/video/e187f6_f1982cee00d04ee494ccdd9c3bf1c7bb/1080p/mp4/file.mp4",
-"text":"Interior Demo",
+"text":"Mood Light",
+"type":"video"
+},
+{
+"src":"https://video.wixstatic.com/video/e187f6_5e294811bc0d433b98ecd2409231f428/1080p/mp4/file.mp4",
+"text":"Mood Light",
 "type":"video"
 }
 ]'
@@ -390,14 +397,7 @@ onclick="openPopup(this)">
 
       </div>
 
-      <!-- ARROWS -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
+     
       <style>
 
         .carousel-control-prev-icon,
@@ -587,60 +587,103 @@ let popupItems = [];
 
 function openPopup(card){
 
-popupItems = JSON.parse(card.dataset.items);
+  popupItems = JSON.parse(card.dataset.items);
 
-const popupInner = document.getElementById("popupCarouselInner");
-popupInner.innerHTML = "";
+  const popupInner = document.getElementById("popupCarouselInner");
+  popupInner.innerHTML = "";
 
-popupItems.forEach((item, index) => {
+  popupItems.forEach((item, index) => {
+    const slide = document.createElement("div");
+    slide.className = "carousel-item" + (index === 0 ? " active" : "");
 
-const slide = document.createElement("div");
-slide.className = "carousel-item" + (index === 0 ? " active" : "");
+    if(item.type === "video"){
+      const video = document.createElement("video");
+      video.src = item.src;
+      video.controls = true;
+      video.autoplay = true;
+      video.loop = true;
+      slide.appendChild(video);
+    } else {
+      const img = document.createElement("img");
+      img.src = item.src;
+      slide.appendChild(img);
+    }
 
-if(item.type === "video"){
+    popupInner.appendChild(slide);
+  });
 
-const video = document.createElement("video");
-video.src = item.src;
-video.controls = true;
-video.autoplay = true;
-video.loop = true;
+  document.getElementById("popupCaption").textContent = popupItems[0].text;
+  document.getElementById("imagePopup").classList.add("show");
 
-slide.appendChild(video);
+  popupCarousel = new bootstrap.Carousel(
+    document.getElementById("popupCarousel"),
+    { interval: false }
+  );
 
-}else{
+  const popup = document.getElementById("popupCarousel");
+  const prevBtn = popup.querySelector(".carousel-control-prev");
+  const nextBtn = popup.querySelector(".carousel-control-next");
 
-const img = document.createElement("img");
-img.src = item.src;
+  function updatePopupArrows() {
+    const items = popup.querySelectorAll(".carousel-item");
+    const active = popup.querySelector(".carousel-item.active");
 
-slide.appendChild(img);
+    const index = [...items].indexOf(active);
 
+    // Hide prev on first
+    prevBtn.style.display = (index === 0) ? "none" : "block";
+
+    // Hide next on last
+    nextBtn.style.display = (index === items.length - 1) ? "none" : "block";
+  }
+
+  // Run once
+  updatePopupArrows();
+
+  // Update on slide change
+  popup.addEventListener("slid.bs.carousel", function (e) {
+    document.getElementById("popupCaption").textContent =
+      popupItems[e.to].text;
+
+    updatePopupArrows();
+  });
 }
 
-popupInner.appendChild(slide);
-
-});
-
-document.getElementById("popupCaption").textContent = popupItems[0].text;
-
-document.getElementById("imagePopup").classList.add("show");
-
-popupCarousel = new bootstrap.Carousel(
-document.getElementById("popupCarousel"),
-{ interval:false }
-);
-
-document.getElementById("popupCarousel")
-.addEventListener("slid.bs.carousel", function (e) {
-
-document.getElementById("popupCaption").textContent =
-popupItems[e.to].text;
-
-});
-
-}
 function closePopup(){
   document.getElementById("imagePopup").classList.remove("show");
 }
+</script>
+<script>
+const carousel = document.getElementById('cardCarousel');
+const prevBtn = carousel.querySelector('.carousel-control-prev');
+const nextBtn = carousel.querySelector('.carousel-control-next');
+
+function updateArrows() {
+  const items = carousel.querySelectorAll('.carousel-item');
+  const active = carousel.querySelector('.carousel-item.active');
+
+  const index = [...items].indexOf(active);
+
+  // Hide prev if first slide
+  if (index === 0) {
+    prevBtn.style.display = "none";
+  } else {
+    prevBtn.style.display = "block";
+  }
+
+  // Hide next if last slide
+  if (index === items.length - 1) {
+    nextBtn.style.display = "none";
+  } else {
+    nextBtn.style.display = "block";
+  }
+}
+
+// Run on load
+updateArrows();
+
+// Run after slide change
+carousel.addEventListener('slid.bs.carousel', updateArrows);
 </script>
 
 </body>
