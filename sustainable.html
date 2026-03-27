@@ -66,7 +66,7 @@ padding: 40px clamp(40px, 6vw, 80px);
 .hero p{
   font-size:13.5px;
   line-height:1.65;
-  max-width:540px;
+  max-width:100%;
   color:#ddd;
 }
 
@@ -201,12 +201,16 @@ padding: 40px clamp(40px, 6vw, 80px);
 }
 
 .balanced-text{
-  text-align: justify;
-  text-justify: inter-word;
-  max-width: 720px;        /* keeps clean reading width */
-  line-height: 1.7;
-  hyphens: auto;
+  text-align: justify;          /* looks cleaner than justify */
+  max-width: 750px;
+  line-height: 1.75;
+  color: #ddd;
+
+  word-break: keep-all;
+  overflow-wrap: break-word; /* only break if absolutely needed */
+  hyphens: none;
 }
+
 
 /* ================= BACK BUTTON ================= */
 .hero{
@@ -266,15 +270,13 @@ padding: 40px clamp(40px, 6vw, 80px);
     <h2>Enhancing Visibility, Style & Brand Identity</h2>
 
     <p class="balanced-text">
-        Our sustainable product line is built for the future—combining eco-friendly materials with uncompromising performance. From recycled polymers to biodegradable packaging, we design green accessories/ merchandising that meet global standards without inflating cost or reducing durability.       
+    Designed for a better tomorrow, our sustainable product line reflects a conscious commitment to both performance and the planet. We thoughtfully integrate eco-friendly materials—from recycled polymers to responsibly sourced, biodegradable packaging—into products that uphold the highest standards of quality and durability.
+Every detail is crafted with purpose, ensuring that sustainability never comes at the cost of strength, reliability, or design excellence. The result is a collection of accessories and merchandising solutions that align with global environmental benchmarks while remaining accessible and practical.
+Because true innovation isn’t just about what we create—it’s about how responsibly we create it.
+    
     </p>
     <!-- CAROUSEL -->
-    <div id="cardCarousel" class="carousel slide" data-bs-ride="false">
-
-      <div class="carousel-inner">
-
-        <!-- SLIDE 1 -->
-        <div class="carousel-item active">
+   
           <div class="carousel-content">
             <div class="card-grid">
               <div class="product-card" onclick="openPopup(this)">
@@ -286,9 +288,7 @@ padding: 40px clamp(40px, 6vw, 80px);
               <div class="product-card" onclick="openPopup(this)">
                 <img src="https://i.ibb.co/4Z3twmhq/Mug-copy.jpg">
               </div>
-              <div class="product-card" onclick="openPopup(this)">
-                <img src="https://i.ibb.co/SX6j9mrb/sustainable.jpg">
-              </div>
+              
               <div class="product-card" onclick="openPopup(this)">
                 <img src="https://i.ibb.co/HLR7vv9W/mugg.jpg">
               </div>
@@ -299,13 +299,7 @@ padding: 40px clamp(40px, 6vw, 80px);
       </div>
 
       <!-- ARROWS -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
+    
       <style>
 
         .carousel-control-prev-icon,
