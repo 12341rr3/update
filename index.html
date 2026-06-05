@@ -1343,7 +1343,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     message: document.getElementById("message").value
   };
 
-  const response = await fetch("http://localhost:3000/send-email", {
+  const response = await fetch("https://update-server-js.onrender.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
