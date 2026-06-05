@@ -2,58 +2,83 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 
-
 const app = express();
-app.use(cors());
+
+// ✅ Proper CORS Configuration
+const allowedOrigins = [
+  "https://navisthaa.com",
+  "https://www.navisthaa.com"
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // allow requests with no origin (like Postman)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS not allowed for this origin: " + origin));
+    }
+  },
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
+  credentials: true
+}));
+
+// ✅ Handle preflight requests
+app.options("*", cors());
+
 app.use(express.json());
 
-// ✅ EMAIL ROUTE
+// ✅ Test route (important for checking server)
+app.get("/", (req, res) => {
+  res.send("Server is running ✅");
+});
+
+// ✅ Email Route
 app.post("/send-email", async (req, res) => {
   const { name, email, phone, message } = req.body;
 
-  console.log("User Data:", req.body); // Debug
+  console.log("Incoming Data:", req.body);
 
   try {
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
+      service: "gmail",
       auth: {
-  user: process.env.EMAIL_USER,
-  pass: process.env.EMAIL_PASS
-},
-       tls: {
-    rejectUnauthorized: false   // ✅ FIX
-  }
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+      }
     });
 
     const mailOptions = {
-      from: email,
-      to: 
-        "shreyrj2205@gmail.com",
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER,
       bcc: "shreyash.jadhav@mldc.edu.in",
-            // company mail (where you receive)
       replyTo: email,
       subject: "New Inquiry Received",
       html: `
-        
+        <h3>New Contact Form Submission</h3>
         <p><b>Name:</b> ${name}</p>
         <p><b>Email:</b> ${email}</p>
-        <p><b>Contact:</b> ${phone}</p>
+        <p><b>Phone:</b> ${phone}</p>
         <p><b>Message:</b> ${message}</p>
       `
     };
 
     await transporter.sendMail(mailOptions);
 
-    res.json({ message: "Email sent successfully ✅" });
+    res.status(200).json({ success: true, message: "Email sent ✅" });
 
   } catch (error) {
-    console.error("ERROR:", error);
-    res.status(500).json({ message: "Failed to send email ❌" });
+    console.error("EMAIL ERROR:", error); // 🔥 check this in Render logs
+    res.status(500).json({ success: false, message: "Failed to send email ❌" });
   }
 });
 
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+// ✅ PORT (Render uses dynamic port)
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
