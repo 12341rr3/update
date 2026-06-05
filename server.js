@@ -3,8 +3,16 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://www.navisthaa.com",
+    "https://navisthaa.com"
+  ],
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 app.use(express.json());
+app.options("*", cors());
 
 // ✅ EMAIL ROUTE
 app.post("/send-email", async (req, res) => {
