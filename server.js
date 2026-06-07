@@ -49,13 +49,7 @@ app.post("/send-email", async (req, res) => {
     }
 
     // ✅ Check ENV variables
-    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-      console.error("ENV VARIABLES MISSING");
-      return res.status(500).json({
-        success: false,
-        message: "Server configuration error"
-      });
-    }
+  
 
     // ✅ Transporter
    const transporter = nodemailer.createTransport({
@@ -63,8 +57,8 @@ app.post("/send-email", async (req, res) => {
   port: 465,
   secure: true,
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
+    user: "shreyrj2205@gmail.com",
+    pass: "gfhe opkm shiq sitk"
   },
   connectionTimeout: 10000, // 10 sec
   greetingTimeout: 10000
@@ -75,8 +69,8 @@ app.post("/send-email", async (req, res) => {
 
     // ✅ Mail Options
     const mailOptions = {
-      from: `"Website Contact" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER,
+      from: email,
+      to: "shreyrj2205@gmail.com",
       bcc: "shreyash.jadhav@mldc.edu.in",
       replyTo: email,
       subject: "New Inquiry Received",
