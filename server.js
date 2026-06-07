@@ -1,46 +1,37 @@
 const express = require("express");
-const nodemailer = require("nodemailer");
 const cors = require("cors");
+const { Resend } = require("resend");
 
 const app = express();
 
-// ✅ CORS Configuration
-const allowedOrigins = [
-  "https://navisthaa.com",
-  "https://www.navisthaa.com"
-];
-
+// ✅ CORS (keep simple)
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
-
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      console.log("Blocked by CORS:", origin); // 👈 debug
-      callback(new Error("CORS not allowed"));
-    }
-  },
+  origin: [
+    "https://navisthaa.com",
+    "https://www.navisthaa.com"
+  ],
   methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
   credentials: true
 }));
 
 app.use(express.json());
 
-// ✅ Test route
+// ✅ Initialize Resend
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+// ✅ Test Route
 app.get("/", (req, res) => {
-  res.send("Server is running ✅");
+  res.send("Server running ✅");
 });
 
 // ✅ Email Route
 app.post("/send-email", async (req, res) => {
   try {
-    console.log("Incoming Data:", req.body);
-
     const { name, email, phone, message } = req.body;
 
-    // ✅ Validate input (VERY IMPORTANT)
+    console.log("Incoming Data:", req.body);
+
+    // ✅ Validation
     if (!name || !email || !message) {
       return res.status(400).json({
         success: false,
@@ -48,31 +39,10 @@ app.post("/send-email", async (req, res) => {
       });
     }
 
-    // ✅ Check ENV variables
-  
-
-    // ✅ Transporter
-   const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
-  auth: {
-    user: "shreyrj2205@gmail.com",
-    pass: "gfhe opkm shiq sitk"
-  },
-  connectionTimeout: 10000, // 10 sec
-  greetingTimeout: 10000
-});
-
-    // ✅ Verify transporter (helps debug)
-    await transporter.verify();
-
-    // ✅ Mail Options
-    const mailOptions = {
-      from: email,
-      to: "shreyrj2205@gmail.com",
-      bcc: "shreyash.jadhav@mldc.edu.in",
-      replyTo: email,
+    // ✅ Send email to YOU (company inbox)
+    await resend.emails.send({
+      from: "coding220405@gmail.com", // ✅ default sender (works instantly)
+      to: ["shreyrj2205@gmail.com"], // 👈 change to your email
       subject: "New Inquiry Received",
       html: `
         <h3>New Contact Form Submission</h3>
@@ -81,25 +51,33 @@ app.post("/send-email", async (req, res) => {
         <p><b>Phone:</b> ${phone || "N/A"}</p>
         <p><b>Message:</b> ${message}</p>
       `
-    };
+    });
 
-    // ✅ Send Email
-    const info = await transporter.sendMail(mailOptions);
+    // ✅ Auto-reply to user
+    await resend.emails.send({
+      from: "coding220405@gmail.com",
+      to: [email],
+      subject: "We received your inquiry",
+      html: `
+        <p>Hi ${name},</p>
+        <p>Thank you for contacting us. Our team will get back to you shortly.</p>
+        <br/>
+        <p>Regards,<br/>Navisthaa Team</p>
+      `
+    });
 
-    console.log("Email Sent:", info.response); // 👈 debug success
-
-    res.status(200).json({
+    return res.status(200).json({
       success: true,
       message: "Email sent successfully ✅"
     });
 
   } catch (error) {
-    console.error("FULL ERROR:", error); // 👈 THIS will tell exact issue
+    console.error("RESEND ERROR:", error);
 
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       message: "Failed to send email ❌",
-      error: error.message // 👈 helps debugging frontend too
+      error: error.message
     });
   }
 });
