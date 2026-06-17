@@ -40,33 +40,23 @@ app.post("/send-email", async (req, res) => {
     }
 
     // ✅ Send email to YOU (company inbox)
-    await resend.emails.send({
-      from: "shreyrj2205@gmail.com", // ✅ default sender (works instantly)
-      to: ["shreyrj2205@gmail.com"], // 👈 change to your email
-      subject: "New Inquiry Received",
-      html: `
-        <h3>New Contact Form Submission</h3>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Phone:</b> ${phone || "N/A"}</p>
-        <p><b>Message:</b> ${message}</p>
-      `
-    });
+    const response1 = await resend.emails.send({
+  from: "onboarding@resend.dev",
+  to: ["shreyrj2205@gmail.com"],
+  subject: "New Inquiry Received",
+  html: `...`
+});
 
-    // ✅ Auto-reply to user
-    await resend.emails.send({
-      from: "coding220405@gmail.com",
-      to: [email],
-      subject: "We received your inquiry",
-      html: `
-        <p>Hi ${name},</p>
-        <p>Thank you for contacting us. Our team will get back to you shortly.</p>
-        <br/>
-        <p>Regards,<br/>Navisthaa Team</p>
-      `
-    });
+console.log("Admin Mail:", response1);
 
-    return res.status(200).json({
+const response2 = await resend.emails.send({
+  from: "onboarding@resend.dev",
+  to: [email],
+  subject: "We received your inquiry",
+  html: `...`
+});
+
+console.log("User Mail:", response2);    return res.status(200).json({
       success: true,
       message: "Email sent successfully ✅"
     });
