@@ -41,7 +41,7 @@ app.post("/send-email", async (req, res) => {
 
     // ✅ Send email to YOU (company inbox)
     await resend.emails.send({
-      from: "coding220405@gmail.com", // ✅ default sender (works instantly)
+      from: "shreyrj2205@gmail.com", // ✅ default sender (works instantly)
       to: ["shreyrj2205@gmail.com"], // 👈 change to your email
       subject: "New Inquiry Received",
       html: `
