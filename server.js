@@ -44,7 +44,11 @@ app.post("/send-email", async (req, res) => {
   from: "onboarding@resend.dev",
   to: ["shreyrj2205@gmail.com"],
   subject: "New Inquiry Received",
-  html: `...`
+  html: `<h3>New Contact Form Submission</h3>
+  <p><b>Name:</b> ${name}</p>
+  <p><b>Email:</b> ${email}</p>
+  <p><b>Phone:</b> ${phone || "N/A"}</p>
+  <p><b>Message:</b> ${message}</p>`
 });
 
 console.log("Admin Mail:", response1);
@@ -53,7 +57,11 @@ const response2 = await resend.emails.send({
   from: "onboarding@resend.dev",
   to: [email],
   subject: "We received your inquiry",
-  html: `...`
+  html: `<h3>New Contact Form Submission</h3>
+  <p><b>Name:</b> ${name}</p>
+  <p><b>Email:</b> ${email}</p>
+  <p><b>Phone:</b> ${phone || "N/A"}</p>
+  <p><b>Message:</b> ${message}</p>`
 });
 
 console.log("User Mail:", response2);    return res.status(200).json({
