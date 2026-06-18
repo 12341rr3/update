@@ -1570,12 +1570,7 @@ window.addEventListener("load", function () {
 
   const form = document.getElementById("contactForm");
 
-  if (!form) {
-    console.error("Form not found ❌");
-    return;
-  }
-
-  form.addEventListener("submit", async function(e) {
+  form.addEventListener("submit", function(e) {
     e.preventDefault();
 
     const name = document.getElementById("name").value;
@@ -1583,14 +1578,29 @@ window.addEventListener("load", function () {
     const phone = document.getElementById("phone").value;
     const message = document.getElementById("message").value;
 
-    // ✅ Gmail Redirect
     const subject = encodeURIComponent("New Inquiry from " + name);
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
     );
 
-   const mailtoURL = `mailto:pushpa.g@navisthaa.com?subject=${subject}&body=${body}`;
-window.location.href = mailtoURL;
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=pushpa.g@navisthaa.com&su=${subject}&body=${body}`;
+    const mailtoURL = `mailto:pushpa.g@navisthaa.com?subject=${subject}&body=${body}`;
+
+    // 📱 Detect mobile device
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // 👉 Mobile → open mail app
+      window.location.href = mailtoURL;
+    } else {
+      // 💻 Desktop → open Gmail
+      const win = window.open(gmailURL, "_blank");
+
+      // ⚠️ If popup blocked → fallback to mailto
+      if (!win || win.closed || typeof win.closed === "undefined") {
+        window.location.href = mailtoURL;
+      }
+    }
 
   });
 
